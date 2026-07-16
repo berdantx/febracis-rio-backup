@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIMIA — Febracis Rio (CIS Presencial Ago/2026)</title>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple: #8356E7;
+  --purple-l: #9F7BFF;
+  --purple-d: #6B3FD9;
+  --lime: #C4FF4D;
+  --lime-l: #D4FF7D;
+  --lime-d: #B0E640;
+  --black: #0A0A0C;
+  --card: #1A1A1E;
+  --white: #FFFFFF;
+  --g400: #AEAEB2;
+  --g500: #8E8E93;
+  --g600: #636366;
+  --g700: #48484A;
+  --g800: #2C2C2E;
+  --g900: #1C1C1E;
+  --border: rgba(255,255,255,0.1);
+  --xs: 8px; --sm: 12px; --md: 16px; --lg: 24px; --xl: 32px; --2xl: 40px; --3xl: 48px; --4xl: 64px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1060px; margin: 0 auto; padding: var(--lg); }
+
+/* ── NAV ── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10,10,12,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow .3s;
+}
+.nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+.nav-inner {
+  max-width: 1060px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--sm) var(--lg);
+}
+.nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 16px; color: var(--white); letter-spacing: 2px; }
+.nav-links { display: flex; gap: var(--lg); }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--g500);
+  text-decoration: none; transition: color .2s;
+  position: relative; padding-bottom: 2px;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a.active { color: var(--lime); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 2px; background: var(--lime); border-radius: 1px;
+}
+
+/* ── STATUS BAR ── */
+.status-bar {
+  margin-top: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--md);
+  padding: var(--sm) var(--lg);
+  background: rgba(196,255,77,0.05);
+  border: 1px solid rgba(196,255,77,0.15);
+  border-radius: 12px;
+  margin-bottom: var(--lg);
+  flex-wrap: wrap;
+}
+.status-left { display: flex; align-items: center; gap: var(--sm); font-size: 13px; color: var(--g400); }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 8px rgba(196,255,77,0.5); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.status-right { font-size: 12px; color: var(--g500); }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, rgba(131,86,231,0.15) 0%, transparent 50%, rgba(196,255,77,0.08) 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: var(--4xl) var(--xl);
+  text-align: center;
+  margin-bottom: var(--3xl);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 20%, rgba(131,86,231,0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(196,255,77,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-label {
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--purple-l); margin-bottom: var(--sm);
+  position: relative;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif; font-size: 42px; font-weight: 800;
+  margin-bottom: var(--xs); position: relative;
+  line-height: 1.1;
+}
+.hero h1 span { color: var(--purple-l); }
+.hero-subtitle {
+  font-size: 16px; color: rgba(255,255,255,0.5);
+  margin-bottom: var(--lg); position: relative;
+}
+.hero-meta {
+  display: flex; justify-content: center; gap: var(--lg); flex-wrap: wrap;
+  font-size: 13px; color: rgba(255,255,255,0.4); position: relative;
+}
+.hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.hero-meta strong { color: rgba(255,255,255,0.7); }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 14px; border-radius: 999px;
+  font-size: 12px; font-weight: 600;
+}
+.badge-lime { background: rgba(196,255,77,0.15); color: var(--lime); border: 1px solid rgba(196,255,77,0.25); }
+.badge-purple { background: rgba(131,86,231,0.15); color: var(--purple-l); border: 1px solid rgba(131,86,231,0.25); }
+.badge-success { background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.25); }
+.badge-pending { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.25); }
+.badge-critical { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.25); }
+.badge-sm { font-size: 10px; padding: 2px 8px; }
+
+/* ── SECTION ── */
+.section { margin-bottom: var(--3xl); scroll-margin-top: 100px; }
+.section-label {
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--purple-l); margin-bottom: var(--xs);
+}
+.section-title {
+  font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 700;
+  margin-bottom: var(--lg);
+}
+.section-intro { font-size: 14px; color: var(--g500); margin-bottom: var(--lg); max-width: 760px; line-height: 1.7; }
+
+/* ── CARDS ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: var(--xl);
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: rgba(131,86,231,0.4);
+  box-shadow: 0 12px 40px rgba(131,86,231,0.12);
+}
+
+/* ── STAKEHOLDERS ── */
+.people-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: var(--md);
+}
+.person {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: var(--lg);
+  transition: all .3s;
+}
+.person:hover { border-color: rgba(131,86,231,0.4); transform: translateY(-2px); }
+.person-header { display: flex; align-items: center; gap: var(--md); margin-bottom: var(--md); }
+.avatar {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800;
+  flex-shrink: 0;
+}
+.avatar-purple { background: linear-gradient(135deg, var(--purple), var(--purple-d)); }
+.avatar-lime { background: linear-gradient(135deg, var(--lime-d), var(--lime)); color: var(--black); }
+.avatar-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
+.avatar-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.person-name { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; }
+.person-role { font-size: 12px; color: var(--g500); margin-top: 2px; }
+.person-tag { font-size: 11px; color: var(--g400); display: block; margin-top: var(--xs); }
+.person-engagement { display: flex; align-items: center; gap: 6px; margin-top: var(--sm); font-size: 11px; color: var(--g500); }
+.eng-dot { width: 6px; height: 6px; border-radius: 50%; }
+.eng-high { background: var(--lime); box-shadow: 0 0 6px rgba(196,255,77,0.5); }
+.eng-mid { background: #fbbf24; }
+.eng-low { background: var(--g700); }
+.person-note { font-size: 12px; color: var(--g400); line-height: 1.5; padding-top: var(--sm); border-top: 1px solid rgba(255,255,255,0.06); margin-top: var(--sm); }
+
+/* ── METRICS GRID ── */
+.metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--md); margin-bottom: var(--lg); }
+.metric {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: var(--md) var(--lg);
+}
+.metric-value { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; color: var(--white); line-height: 1.1; }
+.metric-value.danger { color: #f87171; }
+.metric-value.warn { color: #fbbf24; }
+.metric-value.ok { color: var(--lime); }
+.metric-label { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--g600); margin-top: var(--xs); }
+.metric-sub { font-size: 11px; color: var(--g500); margin-top: 4px; }
+
+/* ── FINDINGS GRID ── */
+.findings-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--md); }
+.finding {
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  border-left: 3px solid var(--purple);
+  border-radius: 10px;
+  padding: var(--md) var(--lg);
+}
+.finding.alert { border-left-color: #f87171; }
+.finding.quickwin { border-left-color: var(--lime); }
+.finding-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.finding-text { font-size: 12px; color: var(--g400); line-height: 1.5; }
+
+/* ── TASK BOARD ── */
+.board {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: var(--md); margin-bottom: var(--lg);
+}
+.board-col {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: var(--lg);
+}
+.board-col-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: var(--md); padding-bottom: var(--sm);
+  border-bottom: 1px solid var(--border);
+}
+.board-col-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.board-col-count {
+  font-size: 11px; font-weight: 700;
+  background: rgba(131,86,231,0.2); color: var(--purple-l);
+  padding: 2px 8px; border-radius: 999px;
+}
+.task {
+  display: flex; align-items: flex-start; gap: var(--xs);
+  padding: var(--sm); margin-bottom: var(--xs);
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.task:hover { background: rgba(255,255,255,0.06); }
+.task-check {
+  width: 16px; height: 16px; border-radius: 4px;
+  border: 1.5px solid var(--g600);
+  flex-shrink: 0; margin-top: 2px;
+  transition: all .2s;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+}
+.task.done .task-check {
+  background: var(--lime); border-color: var(--lime); color: var(--black);
+}
+.task.done .task-text { color: var(--g600); text-decoration: line-through; }
+.task-text { font-size: 12px; color: var(--g400); line-height: 1.4; }
+.task-due { font-size: 10px; color: var(--g600); margin-top: 4px; }
+.task-due.urgent { color: #fbbf24; }
+
+/* ── NEXT SESSION ── */
+.next-session-card {
+  background: linear-gradient(135deg, rgba(131,86,231,0.15), rgba(196,255,77,0.05));
+  border: 1px solid rgba(131,86,231,0.3);
+  border-radius: 16px;
+  padding: var(--xl);
+  margin-bottom: var(--lg);
+}
+.next-session-label { font-family: 'Syne', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--lime); margin-bottom: var(--xs); }
+.next-session-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: var(--sm); }
+.next-session-meta { font-size: 13px; color: var(--g400); margin-bottom: var(--md); }
+.next-session-steps { display: flex; flex-direction: column; gap: var(--xs); }
+.step {
+  display: flex; align-items: flex-start; gap: var(--sm);
+  padding: var(--sm) var(--md);
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+}
+.step-num {
+  flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--purple); color: var(--white);
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.step-text { font-size: 13px; color: var(--g400); line-height: 1.5; }
+
+/* ── ROADMAP / TIMELINE ── */
+.timeline { position: relative; padding-left: var(--xl); }
+.timeline::before {
+  content: ''; position: absolute; left: 11px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(180deg, var(--lime), var(--purple), var(--g700));
+}
+.timeline-item {
+  position: relative; margin-bottom: var(--xl);
+  opacity: 0; transform: translateY(20px);
+  transition: all .6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.timeline-item.visible { opacity: 1; transform: translateY(0); }
+.timeline-dot {
+  position: absolute; left: -25px; top: 4px;
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--purple); background: var(--black);
+  z-index: 2;
+}
+.timeline-item.done .timeline-dot {
+  border-color: var(--lime); background: var(--lime);
+  box-shadow: 0 0 12px rgba(196,255,77,0.4);
+}
+.timeline-item.current .timeline-dot {
+  border-color: var(--lime); background: transparent;
+  box-shadow: 0 0 0 4px rgba(196,255,77,0.15);
+  animation: pulse-ring 2s infinite;
+}
+@keyframes pulse-ring {
+  0%,100% { box-shadow: 0 0 0 4px rgba(196,255,77,0.15); }
+  50% { box-shadow: 0 0 0 8px rgba(196,255,77,0.05); }
+}
+.timeline-item.future .timeline-dot { border-color: var(--g700); }
+.timeline-phase {
+  font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--purple-l); margin-bottom: 4px;
+}
+.timeline-title {
+  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700;
+  margin-bottom: var(--xs);
+}
+.timeline-desc { font-size: 13px; color: var(--g500); line-height: 1.6; }
+.timeline-badge { margin-top: var(--xs); }
+
+/* ── DECISIONS LIST ── */
+.decisions-list { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sm); }
+.decision {
+  display: flex; align-items: flex-start; gap: var(--sm);
+  padding: var(--sm) var(--md);
+  background: rgba(196,255,77,0.04);
+  border-left: 3px solid var(--lime);
+  border-radius: 8px;
+}
+.decision-icon { color: var(--lime); font-size: 12px; margin-top: 2px; }
+.decision-text { font-size: 12px; color: var(--g400); line-height: 1.5; }
+
+/* ── QUOTES ── */
+.quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--md); }
+.quote {
+  background: rgba(131,86,231,0.06);
+  border-left: 3px solid var(--purple);
+  border-radius: 0 12px 12px 0;
+  padding: var(--md) var(--lg);
+}
+.quote p {
+  font-size: 13px; color: rgba(255,255,255,0.75);
+  font-style: italic; line-height: 1.6;
+}
+.quote-author { font-size: 11px; color: var(--purple-l); margin-top: var(--xs); font-style: normal; font-weight: 600; }
+
+/* ── NOTAS MENTOR ── */
+.notas-grid { display: grid; grid-template-columns: 1fr; gap: var(--sm); }
+.nota-item {
+  display: flex; align-items: flex-start; gap: var(--sm);
+  padding: var(--md) var(--lg);
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--xs);
+  border-left: 3px solid var(--purple);
+}
+.nota-item.quickwin { border-left-color: var(--lime); }
+.nota-item.atencao { border-left-color: #fbbf24; }
+.nota-item.critico { border-left-color: #f87171; }
+.nota-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.nota-text { font-size: 13px; color: var(--g400); line-height: 1.6; }
+.nota-text strong { color: rgba(255,255,255,0.85); }
+
+/* ── HISTORY ── */
+.history-table { width: 100%; border-collapse: collapse; }
+.history-table th {
+  text-align: left; padding: var(--sm) var(--md);
+  font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--g600); border-bottom: 1px solid var(--border);
+  font-family: 'Syne', sans-serif; font-weight: 600;
+}
+.history-table td {
+  padding: var(--sm) var(--md); font-size: 13px;
+  color: var(--g400); border-bottom: 1px solid rgba(255,255,255,0.04);
+  vertical-align: top;
+}
+.history-table tr:last-child td { border-bottom: none; }
+
+/* ── FOOTER ── */
+.footer {
+  text-align: center; padding: var(--xl) 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: var(--xl);
+}
+.footer p { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .people-grid { grid-template-columns: 1fr; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .findings-grid { grid-template-columns: 1fr; }
+  .board { grid-template-columns: 1fr; }
+  .decisions-list { grid-template-columns: 1fr; }
+  .quote-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .hero h1 { font-size: 28px; }
+  .hero { padding: var(--xl) var(--md); }
+  .container { padding: var(--md); }
+  .card { padding: var(--lg); }
+  .section-title { font-size: 22px; }
+}
+
+/* ── PRINT ── */
+@media print {
+  .nav { display: none; }
+  .status-bar { margin-top: 0; }
+  body { background: #fff; color: #111; }
+  .card, .person, .board-col, .next-session-card, .metric { background: #f8f8f8; border: 1px solid #ddd; box-shadow: none; }
+  .section-label, .hero-label, .timeline-phase { color: #555; }
+  .footer { border-top-color: #ddd; }
+  .footer p { color: #999; }
+  * { color: #222 !important; }
+  .badge { border-color: #ccc !important; background: #eee !important; color: #555 !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">PRIMIA.AI</a>
+    <div class="nav-links">
+      <a href="#stakeholders" data-section="stakeholders">Stakeholders</a>
+      <a href="#contexto" data-section="contexto">Contexto</a>
+      <a href="#descobertas" data-section="descobertas">Descobertas</a>
+      <a href="#tarefas" data-section="tarefas">Tarefas</a>
+      <a href="#proxima" data-section="proxima">Proxima Sessao</a>
+      <a href="#roadmap" data-section="roadmap">Roadmap</a>
+      <a href="#notas" data-section="notas">Notas</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div class="status-left">
+      <span class="status-dot"></span>
+      <span>Sessao 1 concluida &middot; <strong style="color:var(--white)">Organizar a Casa</strong> em andamento</span>
+    </div>
+    <div class="status-right">Ultima atualizacao: 22 abr 2026</div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label">Mentoria PRIMIA.AI &middot; Onboarding Concluido</div>
+    <h1>Febracis <span>Rio</span></h1>
+    <p class="hero-subtitle">Funil de uma live so &mdash; Metodo CIS Presencial &middot; Agosto 2026</p>
+    <div class="hero-meta">
+      <span><strong>Inicio:</strong> 06 Abr 2026</span>
+      <span><strong>Escopo:</strong> 3 meses</span>
+      <span><strong>Unidades:</strong> Rio + Brasilia + Orlando</span>
+      <span class="badge badge-lime">Fase 1: Organizar a casa</span>
+    </div>
+  </section>
+
+  <!-- STAKEHOLDERS -->
+  <section class="section" id="stakeholders">
+    <div class="section-label">Grupo de Mentoria</div>
+    <h2 class="section-title">Stakeholders</h2>
+    <p class="section-intro">A sessao 1 revelou quatro papeis distintos no grupo. Comunicacao deve ser calibrada por perfil: Larissa decide operacional, Bruno executa tecnico, Paulo valida escopo, Emerson banca.</p>
+
+    <div class="people-grid">
+
+      <!-- LARISSA -->
+      <div class="person">
+        <div class="person-header">
+          <div class="avatar avatar-lime">L</div>
+          <div>
+            <div class="person-name">Larissa Van Boekel</div>
+            <div class="person-role">Gestora de Marketing &middot; Decisora Operacional</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--sm)">
+          <span class="badge badge-sm badge-lime">Nivel 04 &middot; 83%</span>
+          <span class="badge badge-sm badge-success">Papel confirmado</span>
+        </div>
+        <div class="person-engagement"><span class="eng-dot eng-high"></span> Engajamento alto &middot; contratou Short.io na reuniao</div>
+        <p class="person-note">Tem autoridade para decidir na hora. Resistiu a ideia de SDR IA autonomo (Avalon ainda e beta). Teve crise alergica durante a call &mdash; sinal de saturacao com 3 unidades.</p>
+      </div>
+
+      <!-- BRUNO -->
+      <div class="person">
+        <div class="person-header">
+          <div class="avatar avatar-orange">B</div>
+          <div>
+            <div class="person-name">Bruno</div>
+            <div class="person-role">Trafego &middot; Paginas &middot; Infra (WordPress)</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--sm)">
+          <span class="badge badge-sm badge-purple">Tecnico &middot; 20 anos dev</span>
+          <span class="badge badge-sm badge-pending">Novo no grupo</span>
+        </div>
+        <div class="person-engagement"><span class="eng-dot eng-mid"></span> Engajamento medio &middot; abriu apos demo pratica</div>
+        <p class="person-note">Defensivo inicialmente ("20 anos faco assim"). Gastava 1 semana para criar uma LP via Ctrl+C/V. Virada de chave: mapa de calor + LP em 5 min. Aprende por evidencia.</p>
+      </div>
+
+      <!-- PAULO -->
+      <div class="person">
+        <div class="person-header">
+          <div class="avatar avatar-blue">P</div>
+          <div>
+            <div class="person-name">Paulo</div>
+            <div class="person-role">Socio &middot; Validador de Escopo</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--sm)">
+          <span class="badge badge-sm badge-pending">Critico</span>
+          <span class="badge badge-sm badge-purple">Novo no grupo</span>
+        </div>
+        <div class="person-engagement"><span class="eng-dot eng-high"></span> Engajamento alto &middot; cetico</div>
+        <p class="person-note">Entrou tarde na reuniao. Fez a pergunta incomoda: "Quais sao as entregas?". Admitiu que contratacao foi "na emocao". Se ele ficar alinhado, o grupo segue.</p>
+      </div>
+
+      <!-- EMERSON -->
+      <div class="person">
+        <div class="person-header">
+          <div class="avatar avatar-purple">E</div>
+          <div>
+            <div class="person-name">Emerson Doblas</div>
+            <div class="person-role">Contratante &middot; Sponsor</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--sm)">
+          <span class="badge badge-sm badge-purple">Nivel 04 &middot; 68%</span>
+          <span class="badge badge-sm badge-pending">Dono do orcamento</span>
+        </div>
+        <div class="person-engagement"><span class="eng-dot eng-low"></span> Engajamento baixo &middot; saiu no meio</div>
+        <p class="person-note">Nao esta operacionalmente engajado. Usa-lo so como sponsor. Pendencia: call 1:1 de 15 min para alinhar escopo do agente SDR IA.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTEXTO / NEGOCIO -->
+  <section class="section" id="contexto">
+    <div class="section-label">Negocio</div>
+    <h2 class="section-title">Contexto da Operacao</h2>
+    <p class="section-intro">Febracis Rio opera como franquia da Holding &mdash; vende exclusivamente produtos de Paulo e Camila Vieira (CIS Global, CIS Presencial, BHP, Maestria, ML5). Assumiu Brasilia e Orlando recentemente, o que justifica o atraso para iniciar a mentoria.</p>
+
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="metric-value">150k+</div>
+        <div class="metric-label">Base de Leads</div>
+        <div class="metric-sub">Com duplicacoes no Salesforce</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value warn">9</div>
+        <div class="metric-label">Vendas Mar/2026</div>
+        <div class="metric-sub">Trafego pago</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value danger">R$ 20k</div>
+        <div class="metric-label">Invest/mes trafego</div>
+        <div class="metric-sub">Fev: 17 vendas</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value danger">11s</div>
+        <div class="metric-label">Carregam. LP</div>
+        <div class="metric-sub">Nota D no GT Metrix</div>
+      </div>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="metric-value">30 dias</div>
+        <div class="metric-label">Ciclo medio CIS</div>
+        <div class="metric-sub">Longo &mdash; exige aquecimento</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value warn">3</div>
+        <div class="metric-label">Consultoras</div>
+        <div class="metric-sub">100+ leads perdidos/fds</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">1 semana</div>
+        <div class="metric-label">Para criar 1 LP</div>
+        <div class="metric-sub">Bruno &middot; Ctrl+C/V</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value ok">11 → 37</div>
+        <div class="metric-label">ManyChat / 1 sem</div>
+        <div class="metric-sub">Prova organica</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCOBERTAS -->
+  <section class="section" id="descobertas">
+    <div class="section-label">Sessao 1 &middot; Onboarding de 2026-04-06</div>
+    <h2 class="section-title">Principais Descobertas</h2>
+
+    <div class="findings-grid">
+      <div class="finding alert">
+        <div class="finding-title">Pixel do Facebook como 31o item da LP</div>
+        <div class="finding-text">Na LP principal, o pixel FB comeca a carregar aos 7.6s. Deveria ser o 2o. Isso mata o Connect Rate e explica ROI ruim.</div>
+      </div>
+      <div class="finding alert">
+        <div class="finding-title">Zero rastreamento de origem</div>
+        <div class="finding-text">"Nossa maior dor e identificar de onde vem o clique" (Bruno). Nao sabem se venda veio de anuncio, panfleto, email ou indicacao.</div>
+      </div>
+      <div class="finding alert">
+        <div class="finding-title">Base de leads duplicada</div>
+        <div class="finding-text">Salesforce cria varios registros para o mesmo email. Larissa testou e virou 5 leads. Os 150k declarados podem ser 40-60k reais.</div>
+      </div>
+      <div class="finding quickwin">
+        <div class="finding-title">ManyChat ja provou valor</div>
+        <div class="finding-text">Evento Mulheres em Alta Performance: 11 → 37 mulheres em 1 semana com ManyChat organico. Vitrine de vitoria rapida.</div>
+      </div>
+      <div class="finding quickwin">
+        <div class="finding-title">Brasilia e Orlando sao bonus</div>
+        <div class="finding-text">Tudo estruturado no Rio replica nas outras duas unidades sem contrato extra. ROI percebido em 3x.</div>
+      </div>
+      <div class="finding">
+        <div class="finding-title">Papel da Larissa redefinido</div>
+        <div class="finding-text">Hipotese inicial errada: Larissa NAO e tecnica. E gestora de marketing decisora. Bruno e quem cuida do tecnico.</div>
+      </div>
+      <div class="finding">
+        <div class="finding-title">Dependencia do Guilherme (BI)</div>
+        <div class="finding-text">Larissa e Bruno nao tem acesso direto a relatorios. Tudo passa pelo gestor de BI interno. Gargalo de autonomia.</div>
+      </div>
+      <div class="finding">
+        <div class="finding-title">"Fechamos na emocao" (Paulo)</div>
+        <div class="finding-text">Escopo nao ficou claro no fechamento com Emerson. Formalizar por escrito no grupo nos proximos 2 dias.</div>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--lg)">
+      <h3 style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:var(--md)">Decisoes tomadas na reuniao</h3>
+      <div class="decisions-list">
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">Escopo:</strong> 3 meses (30 dias estruturacao + 2 meses acompanhamento)</span></div>
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">Produto foco:</strong> CIS Presencial Rio, ago/2026</span></div>
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">Short.io contratado</strong> na reuniao (R$ 80/mes)</span></div>
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">Microsoft Clarity</strong> a instalar em todas as LPs</span></div>
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">WhatsApp</strong> migra Cloud Market → ManyChat</span></div>
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">Metodologia replicavel</strong> &mdash; Brasilia e Orlando sao bonus</span></div>
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">SDR IA</strong> fora do escopo &mdash; negociar com Emerson</span></div>
+        <div class="decision"><span class="decision-icon">✓</span><span class="decision-text"><strong style="color:var(--white)">Proxima sessao</strong> apos entrega do checklist</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK BOARD -->
+  <section class="section" id="tarefas">
+    <div class="section-label">Pre-requisitos para a Sessao 2</div>
+    <h2 class="section-title">Board de Tarefas</h2>
+    <p class="section-intro">Quem faz o que antes do proximo encontro. Clique nas tarefas para marcar como concluidas (estado visual local).</p>
+
+    <div class="board">
+
+      <div class="board-col">
+        <div class="board-col-header">
+          <span class="board-col-title">Bruno</span>
+          <span class="board-col-count" id="count-bruno">7</span>
+        </div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Contratar Short.io + liberar acesso ao time</div><div class="task-due urgent">ate 07 abr</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Instalar Microsoft Clarity em todas as LPs</div><div class="task-due">sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Mapear canais de distribuicao no Short.io</div><div class="task-due">sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Enviar LPs (Global + Presencial)</div><div class="task-due">sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Enviar criativos validados (Paulo/Camila) + relatorios</div><div class="task-due">sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Liberar acesso admin WordPress</div><div class="task-due">sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Informar hospedagem, dominios, emails da equipe</div><div class="task-due">sessao 2</div></div></div>
+      </div>
+
+      <div class="board-col">
+        <div class="board-col-header">
+          <span class="board-col-title">Larissa</span>
+          <span class="board-col-count" id="count-larissa">4</span>
+        </div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Audio p/ Dani &amp; Elisa &mdash; autorizacao de pesquisas internas</div><div class="task-due urgent">imediato</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Relatorio de Guilherme &mdash; vendas CIS puro (sem upsells)</div><div class="task-due">sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Confirmar responsavel atual do marketing Holding (Viviane?)</div><div class="task-due">sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Decidir se mantem Cloud Market em paralelo ao ManyChat</div><div class="task-due">sessao 2</div></div></div>
+      </div>
+
+      <div class="board-col">
+        <div class="board-col-header">
+          <span class="board-col-title">Mentor (Berdan + Diego)</span>
+          <span class="board-col-count" id="count-mentor">4</span>
+        </div>
+        <div class="task done"><div class="task-check">✓</div><div><div class="task-text">Enviar checklist + gravacao + resumo na area de membros</div><div class="task-due">07 abr manha &middot; concluido</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Call 1:1 com Emerson (15min) &mdash; escopo SDR IA</div><div class="task-due urgent">antes da sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Diagnostico tecnico das LPs apos acessos</div><div class="task-due">antes da sessao 2</div></div></div>
+        <div class="task" onclick="toggleTask(this)"><div class="task-check">✓</div><div><div class="task-text">Formalizar escopo por escrito no grupo</div><div class="task-due urgent">48h</div></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEXT SESSION -->
+  <section class="section" id="proxima">
+    <div class="section-label">Proxima Sessao</div>
+    <h2 class="section-title">Sessao 2 &middot; Setup de Rastreamento &amp; Diagnostico de LPs</h2>
+
+    <div class="next-session-card">
+      <div class="next-session-label">A agendar apos entrega do checklist</div>
+      <div class="next-session-title">Organizar a casa: parte 1</div>
+      <div class="next-session-meta">Foco: instalar visibilidade total em todos os canais e diagnosticar o que ja esta no ar &middot; ~60 min</div>
+
+      <div class="next-session-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text"><strong style="color:var(--white)">Comecar com demo pratica</strong> &mdash; reorganizacao de 1 LP ao vivo (Bruno aprende por evidencia, nao por teoria)</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Revisar Short.io configurado: canais de distribuicao, links UTM por canal, QR codes para eventos fisicos</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Validar Microsoft Clarity rodando nas LPs (Global + Presencial) &mdash; ver primeiras gravacoes</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Entregar diagnostico tecnico: Connect Rate, ordem de carregamento, peso, JavaScript &mdash; com antes/depois</div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-text">Definir ritual semanal (20-30 min) para nao perder prazo de agosto</div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-text">Revisar relatorios de anuncios (cliques vs conversoes) enviados por Bruno</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section" id="roadmap">
+    <div class="section-label">Plano de Mentoria</div>
+    <h2 class="section-title">Roadmap (3 meses)</h2>
+    <p class="section-intro">Primeiro mes: organizar a casa. Depois: estruturar o funil completo do CIS Presencial. Ultimos 2 meses: acompanhar, ajustar, replicar para Brasilia e Orlando.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item done">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Sessao 1 &middot; 06 Abr 2026</div>
+        <div class="timeline-title">Onboarding e diagnostico inicial</div>
+        <div class="timeline-desc">Contexto do negocio, stack atual, definicao de escopo (3 meses), contratacao do Short.io, adesao a Microsoft Clarity e migracao WhatsApp para ManyChat.</div>
+        <div class="timeline-badge"><span class="badge badge-success badge-sm">Concluida</span></div>
+      </div>
+
+      <div class="timeline-item current">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Fase 1 &middot; Organizar a casa</div>
+        <div class="timeline-title">Sessao 2 &mdash; Setup de rastreamento e diagnostico de LPs</div>
+        <div class="timeline-desc">Validar Short.io e Clarity. Diagnostico tecnico das LPs (Connect Rate, ordem do pixel, performance). Relatorios de anuncios segmentados por cliques e conversoes.</div>
+        <div class="timeline-badge"><span class="badge badge-pending badge-sm">Pendente &middot; aguardando material</span></div>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Fase 1 &middot; Organizar a casa</div>
+        <div class="timeline-title">Sessao 3 &mdash; Otimizacao da LP CIS Presencial</div>
+        <div class="timeline-desc">Atacar o Connect Rate como quick win. Reordenar pixel FB (do 31o para o 2o), reduzir JavaScript, otimizar imagens. Meta: Connect Rate ≥ 80%.</div>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Fase 1 &middot; Organizar a casa</div>
+        <div class="timeline-title">Sessao 4 &mdash; Migracao ManyChat + dedupe base</div>
+        <div class="timeline-desc">Migrar disparos do Cloud Market para ManyChat. Rodar dedupe por email unico no Salesforce. Estrategia de disparo via utilidade (case: R$ 400k economizados).</div>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Fase 1 &middot; Organizar a casa</div>
+        <div class="timeline-title">Sessao 5 &mdash; Pesquisa e diagnostico de audiencia</div>
+        <div class="timeline-desc">Rodar diagnostico estilo Camila (90% de finalizacao) com base Febracis Rio. Entender perfil real do comprador de CIS antes de montar o CPL.</div>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Fase 2 &middot; Funil CIS Presencial</div>
+        <div class="timeline-title">Sessoes 6&ndash;10 &mdash; Estruturar a live unica</div>
+        <div class="timeline-desc">CPL baseado na pesquisa, pagina de captura otimizada, checkout com upsell, sequencias pre/durante/pos-live, recuperacao automatizada, segmentacao por UTM.</div>
+      </div>
+
+      <div class="timeline-item future">
+        <div class="timeline-dot"></div>
+        <div class="timeline-phase">Fase 3 &middot; Acompanhamento</div>
+        <div class="timeline-title">Meses 2&ndash;3 &mdash; Lancamento + replicacao</div>
+        <div class="timeline-desc">Monitoramento da primeira edicao, ajustes baseados em dados, replicacao para Brasilia e Orlando, documentacao do playbook para autonomia pos-mentoria.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUOTES -->
+  <section class="section">
+    <div class="section-label">Sessao 1</div>
+    <h2 class="section-title">Citacoes Reveladoras</h2>
+
+    <div class="quote-grid">
+      <div class="quote"><p>Nossa maior dor e essa, identificar de onde esta vindo o clique.</p><div class="quote-author">&mdash; Bruno</div></div>
+      <div class="quote"><p>Isso pra mim vai ser uma virada de chave pro meu time.</p><div class="quote-author">&mdash; Bruno, sobre Microsoft Clarity</div></div>
+      <div class="quote"><p>Mes passado a gente so fez 9 vendas via trafego.</p><div class="quote-author">&mdash; Larissa, sobre mar/2026</div></div>
+      <div class="quote"><p>Qual que e a nossa funcao aqui primeiro? E organizar a sua casa.</p><div class="quote-author">&mdash; Berdan</div></div>
+      <div class="quote"><p>Contratei, vamos entrar? Vamos.</p><div class="quote-author">&mdash; Larissa, sobre Short.io (na reuniao)</div></div>
+      <div class="quote"><p>A gente queria tanto que foi na emocao, que nao havia nada emocional.</p><div class="quote-author">&mdash; Paulo, sobre o fechamento</div></div>
+    </div>
+  </section>
+
+  <!-- NOTAS MENTOR -->
+  <section class="section" id="notas">
+    <div class="section-label">Leitura Estrategica</div>
+    <h2 class="section-title">Notas para o Mentor</h2>
+
+    <div class="notas-grid">
+      <div class="nota-item critico">
+        <span class="nota-icon">🚩</span>
+        <div class="nota-text"><strong>Formalizar escopo em 48h.</strong> Paulo admitiu "fechamos na emocao". Postar no grupo: 3 meses, 1 lancamento completo, 2 meses de acompanhamento, o que NAO esta incluso. Evita cobranca desencaixada daqui 30 dias.</div>
+      </div>
+      <div class="nota-item atencao">
+        <span class="nota-icon">⚠</span>
+        <div class="nota-text"><strong>Emerson saiu no meio.</strong> Marcar call 1:1 de 15 min antes da sessao 2 para alinhar escopo do agente SDR IA. Nao depender do grupo para decisoes que sao dele.</div>
+      </div>
+      <div class="nota-item atencao">
+        <span class="nota-icon">⚠</span>
+        <div class="nota-text"><strong>Larissa com crise alergica.</strong> 3 unidades simultaneas (Rio + Brasilia + Orlando) estao saturando. Sondar disponibilidade real antes de marcar agenda densa. Sem ritual semanal curto, o prazo de agosto escapa.</div>
+      </div>
+      <div class="nota-item quickwin">
+        <span class="nota-icon">⚡</span>
+        <div class="nota-text"><strong>ManyChat como vitrine.</strong> 11 → 37 pessoas em 1 semana (organico) ja prova valor. Usar na sessao 2 para justificar a migracao do Cloud Market.</div>
+      </div>
+      <div class="nota-item quickwin">
+        <span class="nota-icon">⚡</span>
+        <div class="nota-text"><strong>Brasilia e Orlando = 3x ROI percebido.</strong> Posicionar explicitamente: "o que a gente monta no Rio voce replica nas outras duas sem me pagar de novo". Ancora percepcao de valor.</div>
+      </div>
+      <div class="nota-item">
+        <span class="nota-icon">💡</span>
+        <div class="nota-text"><strong>Calibrar comunicacao por perfil.</strong> Larissa: decisoes operacionais. Bruno: materiais tecnicos + comecar com demo, nao teoria. Paulo: comunicacoes formais de escopo. Emerson: so sponsor.</div>
+      </div>
+      <div class="nota-item">
+        <span class="nota-icon">🔎</span>
+        <div class="nota-text"><strong>Contradicoes a sondar.</strong> Base "150k" vs Salesforce duplicado → rodar dedupe. CAC do CIS puro (sem upsells) e caixa preta. Publico semelhante deveria ter CAC menor se fosse bem calibrado.</div>
+      </div>
+      <div class="nota-item">
+        <span class="nota-icon">📎</span>
+        <div class="nota-text"><strong>Perguntas abertas.</strong> Hospedagem (GoDaddy? VPS?). Relacao financeira com a Holding (royalties/split). Calendario global de lancamentos para evitar canibalizacao entre unidades. Larissa tem backup operacional?</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="section">
+    <div class="section-label">Historico</div>
+    <h2 class="section-title">Sessoes Realizadas</h2>
+
+    <div class="card" style="padding: var(--md) var(--lg)">
+      <table class="history-table">
+        <thead>
+          <tr><th>Data</th><th>Tipo</th><th>Duracao</th><th>Resumo</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>06 Abr 2026</td>
+            <td>Onboarding</td>
+            <td>1h46min</td>
+            <td>Diagnostico inicial. Escopo de 3 meses esclarecido. Short.io contratado. Checklist enviado em 07/04.</td>
+            <td><span class="badge badge-sm badge-success">Concluida</span></td>
+          </tr>
+          <tr>
+            <td>A agendar</td>
+            <td>Sessao 2</td>
+            <td>~60 min</td>
+            <td>Setup de rastreamento e diagnostico de LPs. Aguarda material do grupo.</td>
+            <td><span class="badge badge-sm badge-pending">Pendente</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>PRIMIA.AI &middot; Febracis Rio &middot; gerado apos sessao 1 (06 Abr 2026)</p>
+  </div>
+
+</div>
+
+<script>
+// NAV scroll shadow
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// SCROLL SPY
+const sections = document.querySelectorAll('.section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.toggle('active', l.dataset.section === e.target.id));
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => observer.observe(s));
+
+// TIMELINE reveal
+const tlObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.timeline-item').forEach(i => tlObserver.observe(i));
+
+// TASK TOGGLE
+function toggleTask(el) {
+  el.classList.toggle('done');
+  updateCounts();
+}
+function updateCounts() {
+  ['bruno', 'larissa', 'mentor'].forEach((who, idx) => {
+    const col = document.querySelectorAll('.board-col')[idx];
+    if (!col) return;
+    const total = col.querySelectorAll('.task').length;
+    const done = col.querySelectorAll('.task.done').length;
+    const countEl = document.getElementById('count-' + who);
+    if (countEl) countEl.textContent = (total - done) + '/' + total;
+  });
+}
+updateCounts();
+</script>
+
+</body>
+</html>

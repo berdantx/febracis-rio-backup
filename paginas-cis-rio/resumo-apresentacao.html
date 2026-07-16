@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumo da apresentação · Análise CIS Presencial RJ</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy-0: #030714;
+  --navy: #0A1430;
+  --navy-2: #07102A;
+  --navy-3: #141C3D;
+  --yellow: #FFB901;
+  --yellow-l: #FFCE3D;
+  --yellow-d: #D69900;
+  --white: #ffffff;
+  --g300: #cbd5e1;
+  --g400: #A1A1A1;
+  --g500: #737373;
+  --g600: #525252;
+  --border: rgba(255,185,1,0.18);
+  --border-soft: rgba(255,255,255,0.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 70% 0%, rgba(255,185,1,0.06), transparent 55%),
+    radial-gradient(ellipse at 20% 100%, rgba(43,62,148,0.18), transparent 50%);
+  background-attachment: fixed;
+}
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+/* MASTHEAD */
+.masthead {
+  padding: 40px 0 24px;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+.masthead-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px; font-weight: 900;
+  letter-spacing: -0.04em; font-style: italic;
+  color: var(--yellow);
+}
+.masthead-issue {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; text-align: center;
+  font-weight: 500; color: var(--g400);
+}
+.masthead-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 500; color: var(--g400);
+}
+
+/* HEADER */
+.header {
+  padding: 96px 0 64px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 80px; align-items: end;
+  border-bottom: 1px solid var(--border);
+}
+.eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--yellow);
+  font-weight: 700; margin-bottom: 16px; display: inline-block;
+}
+.eyebrow.dot::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  margin-right: 8px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(28px, 3.4vw, 64px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  max-width: 22ch;
+  color: var(--white);
+}
+.title em {
+  font-style: italic; font-weight: 500; color: var(--yellow);
+}
+.header-meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px; padding-left: 32px;
+  border-left: 1px solid var(--border);
+}
+.header-meta-cell .label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--g500);
+  margin-bottom: 6px; font-weight: 600;
+}
+.header-meta-cell .value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px; font-weight: 700;
+  line-height: 1.15; font-style: italic;
+  letter-spacing: -0.01em; color: var(--white);
+}
+.header-meta-cell .value.big {
+  font-size: 48px; font-weight: 900;
+  letter-spacing: -0.04em; color: var(--yellow);
+  font-style: normal; line-height: 0.95;
+}
+.header-meta-cell .value.big small {
+  display: block; font-size: 12px; font-weight: 400;
+  color: var(--g400); font-style: normal;
+  letter-spacing: 0; margin-top: 6px;
+}
+
+/* SECTION TAG */
+.section-tag {
+  padding: 64px 0 24px;
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 24px; align-items: baseline;
+}
+.section-tag .num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px; font-weight: 300;
+  font-style: italic; line-height: 0.85;
+  letter-spacing: -0.04em; color: var(--yellow);
+}
+.section-tag .meta {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--g400);
+  font-weight: 600; padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(28px, 3.4vw, 38px);
+  font-weight: 600; line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 16px 0 24px;
+  max-width: 880px; color: var(--white);
+}
+.section-title em {
+  font-style: italic; color: var(--yellow); font-weight: 600;
+}
+.section-lead {
+  font-size: 17px; line-height: 1.65;
+  color: var(--g300); max-width: 760px;
+  margin-bottom: 48px;
+}
+
+/* CARDS GENERICOS */
+.cards {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.cards.cards-2 { grid-template-columns: repeat(2, 1fr); }
+.cards.cards-4 { grid-template-columns: repeat(4, 1fr); }
+.card {
+  padding: 32px 28px;
+  text-decoration: none; color: inherit;
+  position: relative; transition: background .25s;
+  display: flex; flex-direction: column;
+  background: var(--navy-2);
+}
+.card:hover { background: var(--navy-3); }
+.card-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; font-weight: 700;
+  color: var(--yellow); margin-bottom: 12px;
+}
+.card-head {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; font-weight: 700;
+  line-height: 1.2; letter-spacing: -0.025em;
+  margin-bottom: 14px; color: var(--white);
+}
+.card-head em { font-style: italic; color: var(--yellow); }
+.card-hook {
+  font-size: 14px; line-height: 1.65;
+  color: var(--g300); flex: 1;
+}
+
+/* BIG NUMBERS ROW */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.stat {
+  background: var(--navy-2);
+  padding: 32px 28px;
+}
+.stat .stat-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px; font-weight: 900;
+  color: var(--yellow); line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 10px; white-space: nowrap;
+}
+.stat .stat-label {
+  font-size: 13px; color: var(--g300);
+  line-height: 1.5;
+}
+
+/* SPLIT (texto + insight) */
+.split {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 64px; align-items: start;
+  margin-bottom: 24px;
+}
+.split-copy h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px; font-weight: 700;
+  margin-bottom: 16px; letter-spacing: -0.02em;
+  color: var(--white);
+}
+.split-copy p {
+  font-size: 15px; line-height: 1.7;
+  color: var(--g300); margin-bottom: 16px;
+}
+.insight {
+  background: var(--navy-2);
+  border: 1px solid var(--border);
+  padding: 28px 28px 32px;
+}
+.insight .label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--yellow);
+  font-weight: 700; margin-bottom: 12px;
+}
+.insight strong {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px; font-weight: 900;
+  color: var(--white); letter-spacing: -0.02em;
+  line-height: 1.1; margin-bottom: 10px;
+}
+.insight p {
+  font-size: 14px; line-height: 1.6;
+  color: var(--g300);
+}
+
+/* COMPARE 2 colunas */
+.compare {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.compare-col { background: var(--navy-2); padding: 32px 28px; }
+.compare-col.good { background: var(--navy-3); }
+.compare-col .label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 700;
+  margin-bottom: 18px;
+}
+.compare-col .label.bad { color: #f87171; }
+.compare-col .label.good { color: var(--yellow); }
+.compare-col ul { list-style: none; }
+.compare-col ul li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 14px; line-height: 1.55;
+  color: var(--g300);
+}
+.compare-col ul li:last-child { border: none; }
+
+/* PROJECTION */
+.scenarios {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.scenario {
+  background: var(--navy-2);
+  padding: 36px 28px 32px;
+}
+.scenario .label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 700;
+  color: var(--g400); margin-bottom: 14px;
+}
+.scenario .big {
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px; font-weight: 900;
+  color: var(--yellow); line-height: 1;
+  letter-spacing: -0.04em; margin-bottom: 10px;
+}
+.scenario .from {
+  font-size: 13px; color: var(--g400);
+  margin-bottom: 18px;
+}
+.scenario .from strong { color: var(--white); font-weight: 600; }
+.scenario .delta {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px; letter-spacing: 0.1em;
+  text-transform: uppercase; font-weight: 700;
+  padding: 5px 11px; border-radius: 3px;
+  background: rgba(255,185,1,0.10);
+  color: var(--yellow); border: 1px solid var(--border);
+}
+
+/* CALLOUT */
+.callout {
+  margin: 16px 0 64px;
+  padding: 28px 32px;
+  background: rgba(255,185,1,0.06);
+  border-left: 3px solid var(--yellow);
+  border-radius: 4px;
+  font-size: 14.5px; line-height: 1.7;
+  color: var(--g300);
+}
+.callout .label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--yellow);
+  font-weight: 700; margin-bottom: 8px;
+}
+
+/* NEXT STEPS */
+.steps {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 64px;
+}
+.step {
+  background: var(--navy-2); padding: 32px 28px;
+}
+.step .num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--yellow);
+  font-weight: 700; margin-bottom: 14px;
+}
+.step h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px; font-weight: 700;
+  line-height: 1.25; margin-bottom: 12px;
+  letter-spacing: -0.02em; color: var(--white);
+}
+.step p {
+  font-size: 14px; line-height: 1.65;
+  color: var(--g300);
+}
+
+/* RELATED */
+.related-cards {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 80px;
+}
+.related-link {
+  background: var(--navy-2); padding: 28px;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: background .25s;
+}
+.related-link:hover { background: var(--navy-3); }
+.related-link .tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--yellow);
+  font-weight: 700;
+}
+.related-link .name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1.2;
+  color: var(--white);
+}
+.related-link .descr {
+  font-size: 13px; line-height: 1.6; color: var(--g300);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 48px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--g500);
+  background: var(--navy-0);
+  border-top: 1px solid var(--border);
+}
+footer .brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px; font-weight: 900;
+  font-style: italic; letter-spacing: -0.02em;
+  color: var(--yellow); text-transform: none;
+  margin-bottom: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .header { grid-template-columns: 1fr; gap: 32px; }
+  .header-meta { padding-left: 0; border-left: 0; border-top: 1px solid var(--border); padding-top: 24px; }
+  .cards, .cards.cards-2, .cards.cards-4 { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .split { grid-template-columns: 1fr; gap: 32px; }
+  .compare { grid-template-columns: 1fr; }
+  .scenarios { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .related-cards { grid-template-columns: 1fr; }
+  .masthead { grid-template-columns: 1fr; text-align: center; gap: 8px; }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 0 20px; }
+  .header { padding: 56px 0 40px; }
+  .stats { grid-template-columns: 1fr; }
+  .scenario .big { font-size: 52px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-brand">Análise CIS Presencial RJ</div>
+    <div class="masthead-issue">№ 03 — Resumo da apresentação</div>
+    <div class="masthead-date">Maio 2026 — Febracis Rio</div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div>
+      <span class="eyebrow dot">Gravação de apresentação · Uso restrito</span>
+      <h1 class="title">Por que <em>refazer</em> a página do CIS Presencial Rio.</h1>
+    </div>
+    <div class="header-meta">
+      <div class="header-meta-cell">
+        <div class="label">Investido</div>
+        <div class="value">R$ 37,6 mil<br><small style="font-style:normal;font-weight:400;color:var(--g400);font-size:12px;display:block;margin-top:4px;">tráfego nov/2025</small></div>
+      </div>
+      <div class="header-meta-cell">
+        <div class="label">Vendas via tráfego</div>
+        <div class="value big">9<small>nove vendas em 30 dias</small></div>
+      </div>
+      <div class="header-meta-cell">
+        <div class="label">Cadastros captados</div>
+        <div class="value">2.779<br><small style="font-style:normal;font-weight:400;color:var(--g400);font-size:12px;display:block;margin-top:4px;">leads sem conversão</small></div>
+      </div>
+      <div class="header-meta-cell">
+        <div class="label">Estimativa nova LP</div>
+        <div class="value">+55% a +244%<br><small style="font-style:normal;font-weight:400;color:var(--g400);font-size:12px;display:block;margin-top:4px;">3 cenários projetados</small></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 01 — DIAGNÓSTICO -->
+  <div class="section-tag">
+    <div class="num">01</div>
+    <div class="meta">Diagnóstico · O que o dado diz</div>
+  </div>
+  <h2 class="section-title">O que está acontecendo hoje, <em>em números</em>.</h2>
+  <p class="section-lead">Antes de defender qualquer estrutura nova é preciso olhar para o que o dado diz. Os relatórios de novembro/2025 enviados pela equipe mostram a situação real.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">R$ 37,6k</div>
+      <div class="stat-label">investidos em tráfego em nov/2025</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2.779</div>
+      <div class="stat-label">cadastros captados no método CIS</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">9</div>
+      <div class="stat-label">vendas via tráfego no ciclo (mar/2025)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">68%</div>
+      <div class="stat-label">público feminino, 35-44 anos, 96% RJ</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="label">O essencial em uma frase</div>
+    O lead chega, o lead não converte. Tráfego pago captura mas a página não vende, o tracking não fecha o loop e a oferta esfria antes da consultora ligar. Em ciclo de 30 dias, o lead já não atende.
+  </div>
+
+  <!-- 02 — 8 PONTOS -->
+  <div class="section-tag">
+    <div class="num">02</div>
+    <div class="meta">Diagnóstico · Onde está deixando dinheiro na mesa</div>
+  </div>
+  <h2 class="section-title">8 pontos que travam a venda <em>hoje</em>.</h2>
+  <p class="section-lead">Mapeados a partir do cruzamento entre a página atual, os relatórios Meta e a fala do Paulo Vieira no anúncio campeão.</p>
+
+  <div class="cards cards-4">
+    <div class="card">
+      <div class="card-num">01</div>
+      <h3 class="card-head">Página institucional, não de venda.</h3>
+      <p class="card-hook">Vende o método CIS no abstrato. Não vende o evento 05–07 ago no Rio Centro. Falta data, local, agenda, lotes, ingresso, garantia.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">02</div>
+      <h3 class="card-head">Quebra de mensagem anúncio → página.</h3>
+      <p class="card-hook">Anúncio campeão fala em procrastinação, autossabotagem, pagar o preço. A página chega só com "viva seu máximo potencial". Sai motivacional, não converte.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">03</div>
+      <h3 class="card-head">CTA primário fraco.</h3>
+      <p class="card-hook">Botão verde discreto, sem sombra, sem pulso. O olho passa direto. Você paga pelo clique e o clique não acontece dentro da página.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">04</div>
+      <h3 class="card-head">Zero rastreamento de origem.</h3>
+      <p class="card-hook">Sem UTM consistente. Você sabe qual anúncio gera cadastro, não sabe qual gera venda. Inteligência de campanha quebrada.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">05</div>
+      <h3 class="card-head">Sem preço, sem lote, sem garantia.</h3>
+      <p class="card-hook">Curioso sai da página sem informação para decidir. Tem que esperar consultora ligar. Em 30 dias o lead esfria antes.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">06</div>
+      <h3 class="card-head">Sem prova social do Rio.</h3>
+      <p class="card-hook">Foto de Salvador para uma audiência de 96% RJ que quer ver o Rio Centro. Prova genérica não converte audiência local.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">07</div>
+      <h3 class="card-head">Sem urgência visível.</h3>
+      <p class="card-hook">Não há lote, prazo ou limite de vaga aparente. Sem escassez, sem motivo para decidir agora.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">08</div>
+      <h3 class="card-head">Persona indefinida.</h3>
+      <p class="card-hook">Texto de 8 linhas tentando atender 6 perfis. Os dados mostram mulher executiva carioca 35-44. Quem fala com todos, não fala com ninguém.</p>
+    </div>
+  </div>
+
+  <!-- 03 — TRÊS PÁGINAS -->
+  <div class="section-tag">
+    <div class="num">03</div>
+    <div class="meta">Estratégia · 3 páginas, 3 hipóteses</div>
+  </div>
+  <h2 class="section-title">Cada cluster de criativo cai na <em>LP certa</em>.</h2>
+  <p class="section-lead">Três anúncios diferentes, três personas, três páginas espelhando a fala exata de cada um. Não é A/B de cor de botão, é A/B de hipótese de copy.</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">V1 · Sabotagem</div>
+      <h3 class="card-head">A pessoa que mais te <em>sabota</em> está dentro de você.</h3>
+      <p class="card-hook"><strong style="color:var(--white);">Cluster:</strong> autossabotagem.<br><strong style="color:var(--white);">Persona:</strong> empresários 30-50, perto da virada.<br><strong style="color:var(--white);">Tom:</strong> confrontador, racional.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">V2 · Mente Inimiga</div>
+      <h3 class="card-head">Sua mente virou seu <em>maior inimigo</em>.</h3>
+      <p class="card-hook"><strong style="color:var(--white);">Cluster:</strong> mente travada, não sabe por quê.<br><strong style="color:var(--white);">Persona:</strong> executivo com síndrome de impostor e ansiedade.<br><strong style="color:var(--white);">Tom:</strong> introspectivo.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">V3 · 1+1</div>
+      <h3 class="card-head">Compre 1 ingresso, leve mais <em>1 pessoa</em>.</h3>
+      <p class="card-hook"><strong style="color:var(--white);">Cluster:</strong> oferta de par.<br><strong style="color:var(--white);">Persona:</strong> casais, sócios, pais e filhos.<br><strong style="color:var(--white);">Tom:</strong> oferta com altruísmo.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="label">Como funciona o roteamento</div>
+    Cada criativo do Meta Ads recebe uma UTM dedicada e aponta para a LP que ecoa o vocabulário do anúncio. Quem clicou no anúncio de sabotagem encontra a mesma palavra na headline da página. Zero quebra de mensagem.
+  </div>
+
+  <!-- 04 — COMPARATIVO -->
+  <div class="section-tag">
+    <div class="num">04</div>
+    <div class="meta">Comparativo · Estrutura, não cosmética</div>
+  </div>
+  <h2 class="section-title">Lado a lado, só o que altera <em>taxa de conversão</em>.</h2>
+
+  <div class="compare">
+    <div class="compare-col">
+      <div class="label bad">Página atual</div>
+      <ul>
+        <li>Vende o conceito do CIS</li>
+        <li>Headline genérica · "viva seu máximo potencial"</li>
+        <li>Fala do método, não do evento</li>
+        <li>Foto do CIS Salvador / outra cidade</li>
+        <li>Próxima edição escondida no meio</li>
+        <li>CTA verde discreto, fácil de ignorar</li>
+        <li>Sem preço, sem lote</li>
+        <li>Formulário de lead sem checkout</li>
+        <li>Texto genérico para 8 linhas de público</li>
+        <li>FAQ não é sobre o evento</li>
+        <li>Sem agenda dos 3 dias</li>
+        <li>Sem garantia visível</li>
+        <li>Mesmo template das outras unidades</li>
+        <li>Tracking quebrado · sem UTM</li>
+      </ul>
+    </div>
+    <div class="compare-col good">
+      <div class="label good">Proposta nova</div>
+      <ul>
+        <li>Vende o ingresso do evento</li>
+        <li>Headline ecoando o anúncio campeão</li>
+        <li>Especifica 05–07 ago, no Rio Centro</li>
+        <li>Foto/vídeo no próprio Rio Centro</li>
+        <li>Data e local na primeira fold</li>
+        <li>CTA amarelo sólido, sombra e pulso</li>
+        <li>Lotes visíveis com escala de preço</li>
+        <li>Pré-checkout com captura + redirect</li>
+        <li>Persona definida · checklist de identificação</li>
+        <li>FAQ sobre logística, dress code, parcelamento</li>
+        <li>Agenda dos 3 dias visível</li>
+        <li>Garantia em destaque</li>
+        <li>Template próprio do Rio</li>
+        <li>UTM 100% rastreável por criativo</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 05 — PRÉ-CHECKOUT -->
+  <div class="section-tag">
+    <div class="num">05</div>
+    <div class="meta">Pré-checkout · Por que muda o jogo</div>
+  </div>
+  <h2 class="section-title">A pessoa não precisa esperar a consultora <em>ligar</em>.</h2>
+  <p class="section-lead">No fluxo atual, o lead chega → preenche formulário → entra na fila do time comercial → recebe ligação em 24-72h. Em ciclo de 30 dias, lead já esfriou. O pré-checkout fecha o ciclo no momento do interesse.</p>
+
+  <div class="split">
+    <div class="split-copy">
+      <h3>Como funciona, na prática</h3>
+      <p>O visitante clica no CTA. Abre um modal pedindo nome, email e WhatsApp. Os dados caem em uma planilha/CRM seu antes do redirect. Em seguida ele é mandado para o checkout do CIS com as UTMs preservadas. Se não comprar, o time tem o contato dele e a origem exata do criativo.</p>
+      <p>Resultado: você captura o lead mesmo quando ele não converte na mesma sessão, e tem inteligência sobre qual criativo gerou venda, não só qual gerou cadastro.</p>
+    </div>
+    <div class="insight">
+      <div class="label">Benchmark de mercado · high-ticket</div>
+      <strong>+15% conversão lead→venda</strong>
+      <p>Mais 30% de leads recuperados em 48h via remarketing. 100% UTMs preservadas até o pixel de compra do Meta.</p>
+    </div>
+  </div>
+
+  <!-- 06 — INSPIRAÇÃO -->
+  <div class="section-tag">
+    <div class="num">06</div>
+    <div class="meta">Inspiração · A própria holding já mostrou o caminho</div>
+  </div>
+  <h2 class="section-title">O que a página do CIS Online <em>já faz certo</em>.</h2>
+  <p class="section-lead">A própria Holding já tem uma LP que vende. Não fomos nós que fizemos, mas estamos no ecossistema e tomamos como referência. O Presencial Rio simplesmente não aplicou ainda.</p>
+
+  <div class="cards cards-2">
+    <div class="card">
+      <div class="card-num">Padrão CIS Online</div>
+      <h3 class="card-head">Hero matador, lotes claros, agenda visível.</h3>
+      <p class="card-hook">Badge laranja + headline forte + 3 números de autoridade. Lote com preço gigante (R$ 197 + 5x sem juros). Cards visuais com tema e descrição. FAQ específica do evento.</p>
+    </div>
+    <div class="card">
+      <div class="card-num">Adaptação ao Presencial</div>
+      <h3 class="card-head">Mesmo DNA visual, agora com lotes do evento.</h3>
+      <p class="card-hook">Paleta navy + amarelo da Febracis. Lotes (Pioneiro Standard / Pioneiro VIP / 1+1), mapa do Rio Centro, agenda dos 3 dias, garantia destacada. Identidade da marca-mãe preservada.</p>
+    </div>
+  </div>
+
+  <!-- 07 — PROJEÇÃO -->
+  <div class="section-tag">
+    <div class="num">07</div>
+    <div class="meta">Projeção · O que muda no número</div>
+  </div>
+  <h2 class="section-title">Mesmo investimento em tráfego. Muda só a <em>página</em> e o fluxo.</h2>
+  <p class="section-lead">Premissas conservadoras, ancoradas nos dados de nov/2025 e benchmarks de mercado high-ticket. Mesmo volume de cadastros, mesma campanha. Sai de 9 vendas para um intervalo de 14 a 31, dependendo do cenário.</p>
+
+  <div class="scenarios">
+    <div class="scenario">
+      <div class="label">Cenário conservador</div>
+      <div class="big">14</div>
+      <div class="from">de <strong>9</strong> vendas atuais</div>
+      <span class="delta">+55%</span>
+    </div>
+    <div class="scenario">
+      <div class="label">Cenário realista</div>
+      <div class="big">22</div>
+      <div class="from">de <strong>9</strong> vendas atuais</div>
+      <span class="delta">+144%</span>
+    </div>
+    <div class="scenario">
+      <div class="label">Cenário otimista</div>
+      <div class="big">31</div>
+      <div class="from">de <strong>9</strong> vendas atuais</div>
+      <span class="delta">+244%</span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="label">Escalabilidade</div>
+    Se a base atual fizer 100 vendas em vez de 9, o mesmo método projeta acima de 300 vendas no cenário realista. A estrutura escala junto com o investimento de tráfego, porque o gargalo deixa de ser a página.
+  </div>
+
+  <!-- 08 — PRÓXIMOS PASSOS -->
+  <div class="section-tag">
+    <div class="num">08</div>
+    <div class="meta">Decisão · O que cabe a vocês agora</div>
+  </div>
+  <h2 class="section-title">3 frentes para destravar antes <em>de subir</em>.</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="num">Passo 01</div>
+      <h4>Validar as 3 LPs</h4>
+      <p>Larissa e Emerson revisam as páginas durante a semana. Aprovado o conceito, o time segue para implementação sem precisar de nova call de validação.</p>
+    </div>
+    <div class="step">
+      <div class="num">Passo 02</div>
+      <h4>Confirmar valores reais dos lotes</h4>
+      <p>Os preços nas páginas hoje são simbólicos para estrutura. Precisamos dos números reais (Pioneiro Standard / VIP / 1+1) e do link do checkout para integrar.</p>
+    </div>
+    <div class="step">
+      <div class="num">Passo 03</div>
+      <h4>Habilitar UTMs e webhook</h4>
+      <p>Bruno cadastra UTM por criativo no Meta Ads e configura o endpoint do webhook do pré-checkout para o CRM. Sem isso, a inteligência de origem fica parcial.</p>
+    </div>
+  </div>
+
+  <!-- LINKS -->
+  <div class="section-tag">
+    <div class="num">09</div>
+    <div class="meta">Material · Páginas e dossiês</div>
+  </div>
+  <h2 class="section-title">Acesso direto ao que foi <em>apresentado</em>.</h2>
+  <p class="section-lead">Todos os artefatos no ar com noindex. Uso restrito ao time interno.</p>
+
+  <div class="related-cards">
+    <a class="related-link" href="defesa-estrategica">
+      <span class="tag">Dossiê № 01</span>
+      <span class="name">Defesa estratégica completa</span>
+      <span class="descr">Os 8 buracos detalhados, comparativo lado a lado, projeção comercial e justificativa de cada decisão de página.</span>
+    </a>
+    <a class="related-link" href="./">
+      <span class="tag">Dossiê № 02</span>
+      <span class="name">Painel A/B · 3 hipóteses</span>
+      <span class="descr">Visão consolidada das 3 versões com URLs sugeridas, UTMs, observações por cluster de criativo.</span>
+    </a>
+    <a class="related-link" href="v1-sabotagem">
+      <span class="tag">LP · V1</span>
+      <span class="name">A pessoa que mais te sabota está dentro de você</span>
+      <span class="descr">Página para o cluster de auto-sabotagem. Tom confrontador, persona empresário 30-50.</span>
+    </a>
+    <a class="related-link" href="v2-mente-inimiga">
+      <span class="tag">LP · V2</span>
+      <span class="name">Sua mente virou seu maior inimigo</span>
+      <span class="descr">Página para o cluster de mente travada. Tom introspectivo, persona síndrome de impostor.</span>
+    </a>
+    <a class="related-link" href="v3-compre-1-leve-1">
+      <span class="tag">LP · V3</span>
+      <span class="name">Compre 1 ingresso, leve mais 1 pessoa</span>
+      <span class="descr">Página para o cluster de oferta de par. Casais, sócios, pais e filhos. Útil também como remarketing.</span>
+    </a>
+    <a class="related-link" href="#" style="opacity:0.6;pointer-events:none;">
+      <span class="tag">Gravação</span>
+      <span class="name">Vídeo da apresentação</span>
+      <span class="descr">Link da gravação compartilhada no grupo. Aproximadamente 32 min com walkthrough de cada artefato.</span>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="brand">Análise CIS Presencial RJ</div>
+  <div>№ 03 · Resumo da apresentação · CIS Presencial Rio · Maio 2026</div>
+</footer>
+
+</body>
+</html>

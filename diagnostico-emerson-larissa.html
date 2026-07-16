@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico — Emerson & Larissa</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f0f13;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header .label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #6366f1;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: #1a1a24;
+      border: 1px solid #2d2d3d;
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .avatar.blue { background: linear-gradient(135deg, #3b82f6, #6366f1); }
+    .avatar.purple { background: linear-gradient(135deg, #a855f7, #ec4899); }
+
+    .card-header-info h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 4px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .badge.blue { background: #1e3a5f; color: #60a5fa; }
+    .badge.purple { background: #2d1b4e; color: #c084fc; }
+
+    .score-main {
+      text-align: center;
+      padding: 20px;
+      background: #13131c;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .score-main .number {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .score-main .number.blue { color: #60a5fa; }
+    .score-main .number.purple { color: #c084fc; }
+
+    .score-main .label-score {
+      font-size: 12px;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .axes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .axis-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .axis-label {
+      font-size: 12px;
+      color: #94a3b8;
+      width: 120px;
+      flex-shrink: 0;
+    }
+
+    .axis-bar-wrap {
+      flex: 1;
+      background: #2d2d3d;
+      border-radius: 4px;
+      height: 6px;
+      overflow: hidden;
+    }
+
+    .axis-bar {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+
+    .axis-bar.blue { background: linear-gradient(90deg, #3b82f6, #6366f1); }
+    .axis-bar.purple { background: linear-gradient(90deg, #a855f7, #ec4899); }
+
+    .axis-pct {
+      font-size: 12px;
+      font-weight: 600;
+      color: #cbd5e1;
+      width: 32px;
+      text-align: right;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .gap-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .gap-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      background: #13131c;
+      border-radius: 8px;
+      border-left: 3px solid transparent;
+    }
+
+    .gap-item.alta { border-left-color: #ef4444; }
+    .gap-item.media { border-left-color: #f59e0b; }
+
+    .gap-priority {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .gap-priority.alta { background: #450a0a; color: #f87171; }
+    .gap-priority.media { background: #451a03; color: #fbbf24; }
+
+    .gap-text {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+
+    .quote-block {
+      background: #13131c;
+      border-left: 3px solid #6366f1;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+
+    .quote-block p {
+      font-size: 13px;
+      color: #94a3b8;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .full-card {
+      grid-column: 1 / -1;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparison-table th {
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #475569;
+      border-bottom: 1px solid #2d2d3d;
+    }
+
+    .comparison-table td {
+      padding: 12px 14px;
+      font-size: 13px;
+      color: #cbd5e1;
+      border-bottom: 1px solid #1e1e2e;
+      vertical-align: top;
+    }
+
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    .comparison-table .row-label {
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .tool-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      background: #13131c;
+      border-radius: 10px;
+      border: 1px solid #2d2d3d;
+    }
+
+    .tool-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .tool-icon.vscode { background: #1e3a5f; }
+    .tool-icon.claude { background: #1a2e1a; }
+    .tool-icon.lovable { background: #2d1b4e; }
+    .tool-icon.github { background: #1c1c2e; }
+
+    .tool-info strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 2px;
+    }
+
+    .tool-info span {
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      background: #1e1e2e;
+      color: #94a3b8;
+      border: 1px solid #2d2d3d;
+    }
+
+    .tag.highlight { background: #1e3040; color: #60a5fa; border-color: #1e3a5f; }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      color: #334155;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="label">Mentoria Prima Digital</div>
+      <h1>Diagnóstico — Emerson & Larissa</h1>
+      <p>06 de abril de 2026 · Mentoria conjunta · Sócios</p>
+    </header>
+
+    <div class="grid">
+
+      <!-- EMERSON -->
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar blue">E</div>
+          <div class="card-header-info">
+            <h2>Emerson Doblas</h2>
+            <span class="badge blue">Estrategista Digital · Nível 04</span>
+          </div>
+        </div>
+
+        <div class="score-main">
+          <div class="number blue">68%</div>
+          <div class="label-score">Score Geral</div>
+        </div>
+
+        <div class="axes">
+          <div class="axis-row">
+            <span class="axis-label">Funil / Oferta</span>
+            <div class="axis-bar-wrap"><div class="axis-bar blue" style="width:77%"></div></div>
+            <span class="axis-pct">77%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">IA</span>
+            <div class="axis-bar-wrap"><div class="axis-bar blue" style="width:63%"></div></div>
+            <span class="axis-pct">63%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">Automação</span>
+            <div class="axis-bar-wrap"><div class="axis-bar blue" style="width:66%"></div></div>
+            <span class="axis-pct">66%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">Dados / Decisão</span>
+            <div class="axis-bar-wrap"><div class="axis-bar blue" style="width:32%"></div></div>
+            <span class="axis-pct">32%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">Infraestrutura</span>
+            <div class="axis-bar-wrap"><div class="axis-bar blue" style="width:100%"></div></div>
+            <span class="axis-pct">100%</span>
+          </div>
+        </div>
+
+        <div class="section-title">Gargalo Declarado</div>
+        <div class="quote-block">
+          <p>"Criar uma máquina de venda (tráfego + LP + venda) que possa vender sozinha sem precisar passar pelo meu comercial."</p>
+        </div>
+
+        <div class="section-title">Lacunas Identificadas</div>
+        <div class="gap-list">
+          <div class="gap-item alta">
+            <span class="gap-priority alta">ALTA</span>
+            <span class="gap-text">Infraestrutura — desconhece VPS e servidores</span>
+          </div>
+          <div class="gap-item alta">
+            <span class="gap-priority alta">ALTA</span>
+            <span class="gap-text">Recuperação de vendas — ausência total</span>
+          </div>
+          <div class="gap-item media">
+            <span class="gap-priority media">MÉDIA</span>
+            <span class="gap-text">IA operacional — uso limitado a textos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LARISSA -->
+      <div class="card">
+        <div class="card-header">
+          <div class="avatar purple">L</div>
+          <div class="card-header-info">
+            <h2>Larissa Van Boekel</h2>
+            <span class="badge purple">Escaladora de Elite</span>
+          </div>
+        </div>
+
+        <div class="score-main">
+          <div class="number purple">83%</div>
+          <div class="label-score">Score Geral</div>
+        </div>
+
+        <div class="axes">
+          <div class="axis-row">
+            <span class="axis-label">Funil / Oferta</span>
+            <div class="axis-bar-wrap"><div class="axis-bar purple" style="width:94%"></div></div>
+            <span class="axis-pct">94%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">IA</span>
+            <div class="axis-bar-wrap"><div class="axis-bar purple" style="width:83%"></div></div>
+            <span class="axis-pct">83%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">Automação</span>
+            <div class="axis-bar-wrap"><div class="axis-bar purple" style="width:71%"></div></div>
+            <span class="axis-pct">71%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">Dados / Decisão</span>
+            <div class="axis-bar-wrap"><div class="axis-bar purple" style="width:68%"></div></div>
+            <span class="axis-pct">68%</span>
+          </div>
+          <div class="axis-row">
+            <span class="axis-label">Infraestrutura</span>
+            <div class="axis-bar-wrap"><div class="axis-bar purple" style="width:100%"></div></div>
+            <span class="axis-pct">100%</span>
+          </div>
+        </div>
+
+        <div class="section-title">Gargalo Declarado</div>
+        <div class="quote-block">
+          <p>"Criação de fluxos cíclicos de automação para MKT e vendas."</p>
+        </div>
+
+        <div class="section-title">Lacunas Identificadas</div>
+        <div class="gap-list">
+          <div class="gap-item alta">
+            <span class="gap-priority alta">ALTA</span>
+            <span class="gap-text">Infraestrutura — depende de Zapier/Make (caro), sem VPS</span>
+          </div>
+          <div class="gap-item alta">
+            <span class="gap-priority alta">ALTA</span>
+            <span class="gap-text">Recuperação de vendas — ausência total</span>
+          </div>
+          <div class="gap-item media">
+            <span class="gap-priority media">MÉDIA</span>
+            <span class="gap-text">Fluxos cíclicos — falta conexão end-to-end</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPARATIVO -->
+      <div class="card full-card">
+        <div class="section-title" style="margin-bottom:16px">Comparativo da Dupla</div>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Emerson</th>
+              <th>Larissa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-label">Score Geral</td>
+              <td>68%</td>
+              <td>83%</td>
+            </tr>
+            <tr>
+              <td class="row-label">N8N</td>
+              <td>Só ouviu falar</td>
+              <td>Nunca usou (vem do Zapier/Make)</td>
+            </tr>
+            <tr>
+              <td class="row-label">IA</td>
+              <td>Uso pouco — só textos</td>
+              <td>Uso frequente — copy, dados, atendimento</td>
+            </tr>
+            <tr>
+              <td class="row-label">Funil</td>
+              <td>Parcial</td>
+              <td>Completo</td>
+            </tr>
+            <tr>
+              <td class="row-label">Perfil provável</td>
+              <td>Gestor / estrategista</td>
+              <td>Mais técnica / executora</td>
+            </tr>
+            <tr>
+              <td class="row-label">Ponto em comum</td>
+              <td colspan="2">Sem VPS própria · Sem recuperação de vendas automatizada</td>
+            </tr>
+            <tr>
+              <td class="row-label">Quick Win</td>
+              <td colspan="2">Recuperação de vendas — nenhum dos dois tem, simples de implementar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FERRAMENTAS -->
+      <div class="card full-card">
+        <div class="section-title" style="margin-bottom:16px">Setup Obrigatório — Ambos</div>
+        <div class="tools-grid">
+          <div class="tool-item">
+            <div class="tool-icon vscode">💻</div>
+            <div class="tool-info">
+              <strong>VS Code</strong>
+              <span>Editor de código profissional</span>
+            </div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-icon claude">🤖</div>
+            <div class="tool-info">
+              <strong>Claude Code</strong>
+              <span>IA no terminal para desenvolvimento</span>
+            </div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-icon lovable">✨</div>
+            <div class="tool-info">
+              <strong>Lovable</strong>
+              <span>Criação de apps e páginas com IA</span>
+            </div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-icon github">🐙</div>
+            <div class="tool-info">
+              <strong>GitHub</strong>
+              <span>Conta para versionamento e colaboração</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      Prima Digital · Diagnóstico gerado em 06/04/2026
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+- [Histórico de sessão vai na pasta do projeto](feedback_historico_sessao_na_pasta_projeto.md) — handoff em `<projeto>/_historico-sessoes/`, nunca no inbox.
+- [Método W — lançamento pago destilado](project_metodo_w_lancamento_pago.md) — Willian Baldan/Efeito W. `_metodo/` em Berdan/Estudos/Lançamento Pago + skill global `/lancamento-pago-w`. Irmã da /bvaz-metodo (pago vs gratuito).
+- [Spec/design na pasta base do projeto](feedback_spec_na_pasta_do_projeto.md) — specs vão na pasta do projeto, nunca no genérico docs/superpowers/specs/.
+- [DNA App — SaaS de lançamento guiado por IA](project_dna_product.md) — no ar em dna-app-five.vercel.app. GÊNESIS→narrativa→peças. Motor de copy Primia (Fase 1). Código em `Berdan/n8n/dna-app`.
+- [Guia Lulu da Pomerânia](project_guia_lulu_pomerania.md) — LP e-book reconstruída do zero (estática) e no ar em guia-lulu-pomerania.vercel.app. Falta Dan: GA4/Clarity/CRMV/domínio.
+- [Z.AI GLM Coding Plan = protocolo Anthropic](reference_zai_glm_coding_plan.md) — endpoint api.z.ai/api/anthropic (não OpenAI). Modelos glm-5.2/5-turbo/4.7.
+- [Webtx Talks — ditado por voz](project_webtx_talks.md) — Tauri 2 + Groq Whisper. MVP Windows pronto, falta smoke test do Dan.
+- [Sender Primia / Webtx Messenger](project_sender_primia.md) — SaaS WhatsApp envio em massa. Código vivo no VPS, repo/local desatualizados.
+- [Primia OS — SaaS modular](project_primia_os_saas.md) — skills viram módulos, motor Claude Agent SDK. Fase 1 = Diagnóstico + LP Factory.
+- [Webtx Agents — plataforma SaaS (ManyChat-killer)](project_webtx_agents.md) — deploy webtx-agents.vercel.app. WhatsApp Cloud+UAZAPI+ManyChat Bridge+Flows.
+- [ManyChat Default Reply = "every time" p/ agente IA](feedback_manychat_default_reply_every_time.md) — "once per 24h" silencia webhook sem erro visível.
+- [ManyChat subscriber cold/expired silencia webhook](feedback_manychat_subscriber_cold.md) — janela 24h Meta ou cold. Fix: excluir+recadastrar contato.
+- [Bridge: isolar customer por subscriber_id](feedback_bridge_customer_isolation.md) — nunca lookup com telefone vazio (cola contatos diferentes).
+- [Agente Ana Beatriz — Recuperação Checkout MJP](project_agente_ana_beatriz_mjp.md) — agente recuperação venda MJP (Camila) no Webtx Agents. Prompt no banco.
+- [Plenitude Financeira (Camila Vieira)](project_plenitude_financeira.md) — bônus MJP virando perpétuo. Fundo de funil = Consultoria Vertus.
+- [MJP Estratégia de Ascensão (Camila)](project_mjp_estrategia_ascensao.md) — escada low tickets → MJP → Sala Secreta. 2 frentes (quentes + por dor).
+- [Mentoria Posicione-se (Camila Vieira)](project_mentoria_posicione_se.md) — APROVADA. Ticket R$35-42k, 1a turma 12 vagas. Captação zero tráfego.
+- [Aula Secreta — funil captação (Camila)](project_aula_secreta_camila_vieira.md) — VSL+form 11 perguntas → grupo WhatsApp → aula Zoom. Webhook n8n primia.
+- [Parceria Camila + Bruno (estrategista)](project_camila_bruno_parceria.md) — decisores Camila+Bruno (não Paulo). Não tratar Bruno como risco.
+- [Sempre retornar link clicável ao criar página](feedback_link_clicavel_paginas.md) — markdown `[texto](url)` no fim da resposta.
+- [Primia Flow — substituir ManyChat](project_primia_flow.md) — stack própria BSP+Supabase+n8n. PARADO até pós-campanha Posicione-se.
+- [n8n via API REST + MCP n8n-mcp](reference_n8n_api.md) — workflow.webtxcreative.com. MCP n8n-mcp instalado (preferir às tools nativas). Gotcha: code de Code node de arquivo .js.
+- [Stack ManyChat+n8n+Supabase+Next.js p/ jornada WhatsApp](feedback_manychat_supabase_n8n_pattern.md) — padrão validado Posicione-se, reusável em qualquer expert.
+- [Encoding curl Git Bash quebra UTF-8](feedback_encoding_curl_powershell.md) — p/ smoke test com acentos usar PowerShell Invoke-RestMethod.
+- [Análise Paulo Vieira — Último Recomeço](project_paulo_vieira_ultimo_recomeco.md) — pesquisa 15.810 leads + 16 roteiros. Deploy analise-publico-pv.
+- [Transição CIS Online — Bvaz → Febracis](project_transicao_bvaz_febracis_cis.md) — página-vitrine inventário. Padrão Bvaz dark+bege.
+- [Mentorado José Sidney (Bvaz)](project_jose_sidney_bvaz.md) — Bvaz N4. Big Idea Conselheiro Digital. Deploy primia-bvaz-jose-sidney.
+- [Deploy Dossiê Jefferson e Tayla](project_dossie_jefferson_tayla.md) — Manancial. Dossiê + plano captura EVOLUA. Padrão Primia-OS, noindex.
+- [Breakpoints responsivos padrão](feedback_breakpoints_padrao.md) — desktop >1024, tablet ≤1024, mobile ≤767. Toda landing nova.
+- [Backgrounds responsivos por viewport](feedback_bg_imagem_por_viewport.md) — imagem dedicada por breakpoint, não brigar com cover.
+- [Padrão Julia Pro Academy](feedback_padrao_julia_pro_academy.md) — DS validado Julia (dark roxo, verde CTA, Inter).
+- Skill `landing-julia-pro-academy` (`~/.claude/skills/`) — dark theme roxo.
+- Skill `landing-julia-laranja` (`~/.claude/skills/`) — light theme creme/laranja.
+- Skill `clone-redesign` (`~/.claude/skills/`) — clona páginas, baixa assets, reconstrói com DS.
+- Skill `primia-reverse` (`~/.claude/skills/`, global) — eng. reversa de referências + produção no Método Primia. Caso-base Andrea Vermont.
+- [Design system Primia-OS](feedback_design_system_primia_os.md) — dark roxo editorial Laboratório Noturno. Skill global `primia-os`.
+- [Deploy High Ticket Primia](project_primia_os_vercel.md) — highticket-primia.vercel.app. Tema híbrido (dark navy fora + light interno). GitHub product-dna-lovable-forge.
+- Skill global `highticket-primia` — DS híbrido do produto (dark fora + light interno + sidebar dark). Separado do Primia-OS roxo.
+- [Mentorados TWM (Dalton + Fernando)](project_twm_dalton_fernando.md) — expert Dra. Cris Schumann (psicologia/casais). 2 segmentos, 3 eixos.
+- [Método BVaz destilado](project_bvaz_metodo.md) — 5 princípios + 7 fases + 7 ferramentas. Skill `/bvaz-metodo`.
+- [Destilação de método de expert](feedback_destilacao_metodo_expert.md) — padrão híbrido (filosofia+fases+ferramentas), brainstorm seção-por-seção.
+- [Mentorados Bvaz Febracis Florida (Priscila + Carlos)](project_bvaz_febracis_florida.md) — Orlando, 3 lançamentos paralelos. Escopo PCE expandiu sem proposta.
+- [Mentorados Febracis Rio](project_febracis_rio.md) — LPs aprovadas, sem preço. Produção = `v1-sabotagem-wordpress.html` no WP. Webhook n8n + checkout cispay ativos. UTMs em campos hidden dos forms.
+- [Febracis Rio LP — não editar sem pedido direto](feedback_febracis_rio_nao_editar_sem_pedir.md) — só o pedido, nunca regenerar v1-sabotagem sem ok.
+- [WAF bloqueia parâmetro ?name= na URL](feedback_waf_bloqueia_param_name.md) — 404 com `?name=`, 200 com `?nome=`. Testar param a param via curl.
+- [intl-tel-input: jsDelivr, não cdnjs](feedback_intl_tel_input_jsdelivr.md) — cdnjs não tem `flags.webp`, bandeira não renderiza.
+- [Autofill do Chrome quebra input dark](feedback_autofill_chrome_input_dark.md) — usar `box-shadow inset` + `-webkit-text-fill-color`; `background` é ignorado.
+- [Projeto Commander Primia](project_commander_primia.md) — SaaS analytics high-ticket. Memória paralela em `projetos/commander-primia/docs/memory/` (ler primeiro).
+- [Mentorados Febracis Bahia (Bruno + Luana)](project_febracis_bahia.md) — LP em prod febracisbahia.com.br/inteligencia-financeira (WP+Elementor). Modal → webhook n8n.
+- [Deploy primia-if-bahia.vercel.app](project_primia_if_bahia_vercel.md) — TEMPORÁRIO (era até 24/04/2026). Checar se ainda no ar.
+- [Sistema de memória paralela de projetos](feedback_project_memory_system.md) — skill global `project-memory` cria `docs/memory/`. Usar proativamente.
+- [Evitar travessões em textos visíveis](feedback_evitar_travessoes.md) — sem em-dash em copy/landing/conteúdo cliente. Usar vírgula/ponto.
+- [Consultoria de Posicionamento Camila Vieira](project_camila_vieira_consultoria.md) — high-ticket R$30k exclusivo mentorandas. Deploy consultoria-cv.
+- [Treinamento Posicione-se 2026 (Camila)](project_camila_posicione_se_2026.md) — 12k leads, 3 bots, parsers 1-5, modal missão YouTube.
+- [Análise estratégica leads Posicione-se](project_analise_leads_posicione_se.md) — dor declarada emocional, desejo financeiro. Pós-live R$2,88M / 2.037 vendas.
+- [Dashboard público vendas CV](project_dashboard_vendas_publico_cv.md) — Commander Primia, 4 plataformas em tempo real + ações sugeridas. /share/vendas/cv-vendas-2026.
+- [CTA destacado em landings](feedback_cta_destacado_landing.md) — CTA primário nunca ghost. Fundo sólido, shadow colorida. Teste 2s.
+- [Vercel alias não atualiza em re-deploy](feedback_vercel_alias_deploy.md) — sempre `vercel alias set` após deploy. Validar com ?v=timestamp.
+- [Sempre devolver links acessíveis das páginas](feedback_devolver_links_paginas.md) — listar URLs (públicas/gates/locais) no fim da resposta.
+- [PDF salvo na pasta do projeto](feedback_pdf_na_pasta_do_projeto.md) — copiar p/ pasta no vault, não só c:/tmp. Fundo branco, texto escuro, alinh. esquerda.
+- [Deploy Primia Slides em produção](project_primia_slides_deploy.md) — system.webtxcreative.com via VPS HostHatch+Coolify. Repo slide-gen.
+- [App Trilha Mentores Febracis](project_app_trilha_mentores_febracis.md) — Next16+Supabase, 2 lados. Fase 1 pronta. Falta Fase 2/3/4.
+- [Febracis Mentor de Líderes](project_febracis_mentor_de_lideres.md) — APROVADO: funil 3 páginas/mentor a R$10k/aluno. Caso-âncora Dr. Huendel Rolim.
+- [Deploy proposta Febracis Vercel](project_proposta_febracis_vercel.md) — V1 com Huendel + V2 sem. Noindex, padrão Primia-OS.
+- [Formação END (Bvaz)](project_formacao_end.md) — presencial 2 dias, forma Estrategista Digital. R$12k. Inclusa na Uniq.
+- [Formação END — fase de entrega](project_formacao_end_entrega.md) — presencial JÁ aconteceu. Área membros Cademí (Módulos 0-8) + entrega personalizada 4 alunos. Acesso em 3 dias.
+- [Uniq Club (Bvaz)](project_uniq_club.md) — clube 12 meses, 6 eixos, R$120k (END inclusa). Pendente vídeos depoimento + link aplicação.
+- [Aula Uma Live Só R$97 (Bvaz)](project_aula_uma_live_so.md) — REMARCADO p/ 01/08/2026. Pacote de lançamento pronto (14/07); ler progress-ledger antes de mexer. Gates: checkout Eduzz, grupo, verba, call Bruno 22/07. Página velha 20/06 ainda live.
+- [Usar skill de design em página de vendas](feedback_usar_skill_design_paginas.md) — invocar `frontend-design` antes de codar. BVAZ = dark warm luxury editorial.
+- [Projeto Resumo de Zap](project_resumo_de_zap.md) — SaaS multi-tenant Next14+Supabase+uazapiGO+OpenAI. Falta migrations+webhook+smoke test.
+- [Relatório Camila Vieira (BD_LEADS_052026)](project_relatorio_cv_vercel.md) — primia-relatorio-cv. Captação MJP004, 15.623 cadastros.
+- [Resultados Diagnósticos CV](project_diagnosticos_cv_vercel.md) — primia-diagnosticos-cv. 80% em Realinhamento/Despertar, ~11.800 não chamados p/ MJP004.
+- [Roteiros Reels CV](project_roteiros_cv_vercel.md) — primia-roteiros-cv. 10 roteiros 6 atos 90s, baseados nos campeões de Maio.
+- [Mentoria Primia — método e operação](project_mentoria_primia.md) — squad growth high-touch (não conteúdo). Hober = sócio executor.
+- [Padronização Mentoria Primia](project_mentoria_primia_padronizacao.md) — 6 encontros 1:1 + 3m suporte. 3 fixas + 3 modulares por Caminho. Spec em `Mentoria Primia/_metodo/`.
+- [Assinatura Camila = Primia IA](feedback_assinatura_camila_primia_ia.md) — materiais p/ Camila/Febracis usam "Primia IA" no footer. Interno = Dan & Klaus.
+- [Dupla Dan & Klaus](user_dupla_dan_klaus.md) — apelido oficial. Klaus = eu. Usar em "tamo junto" e fechamento de win.
+- [Perfil Dan (usuário)](user_perfil_dan.md) — Hoberdan, sócio operacional Bvaz + dono Primia. PT-BR informal. Operador, não freelancer.
+- [Bvaz Educação](project_bevaz_educacao.md) — Top Eduzz LATAM. Time Matheus/Diego/Tiago. Produto-âncora "Uma Live Só".
+- [Bia — agente Telegram via OpenClaw](project_bia_agente_telegram.md) — Sonnet 4.6 em VPS. Fix secure context via SSH tunnel porta 18789.
+- [Launch Pocket / Analyze Flow → Commander Primia](project_launch_pocket.md) — DESCONTINUADO, consolidado em Commander Primia.
+- [Método da Cruz (Bruno Vaz) + filosofias Bvaz](feedback_metodo_da_cruz_bruno.md) — 4 pilares. Aquecer p/ EVENTO nunca PRODUTO. 3 tipos criativo. Funil 6 fases.
+- [Framework Willian Baldan](feedback_framework_willian_baldan.md) — 10 elementos sales page paga. One message per fold. Mín 3k visitas A/B.
+- [Stack — gotchas e padrões](reference_stack_gotchas.md) — Windows PATH+reboot, ManyChat dual-field, UAZAPI media, Cloudflare 1000, HTML→PNG, embedding dims.
+- [Padrão Tech-Luxe](feedback_design_tech_luxe.md) — dark #050510 + azul/verde + Jakarta/Space Grotesk + glass. Default SaaS/dashboard técnico.
+- [Família Dan](user_familia_dan.md) — esposa, filha Bia (~5-6a), irmã Gabi (psicologia, trabalha c/ ele). Mapa mental: acumular, não gerar até pedir.
+- [Webtx Creative — agência original](project_webtx_creative.md) — marca-mãe técnica. Vibe foguete/tech. Símbolo TX em foguete.
+- [Catálogo de produtos próprios do Dan](project_produtos_proprios_dan.md) — Webtx OS, WCC, Shield, Storia, diagnósticos, Bia, etc.
+- [Frameworks próprios do Dan](feedback_frameworks_proprios_dan.md) — Mandala de Anúncios, TAP, DNA do Expert, Diagnóstico por Pilares, 5 Camadas Mentoria.
+- [WhatsApp Utility — economia como autoridade](feedback_whatsapp_utility_economia.md) — Utility ~R$0,06 vs Marketing ~R$0,55. Caso 1M+ msgs = ~R$493k.
+- [Clientes históricos do Dan](reference_clientes_historicos_dan.md) — Antonio Neto, Grechi, Magnum, Imperium, Sprint 28, ZION, etc.
+- [Planos de mentoria — referência](feedback_planos_mentoria_referencia.md) — Plano A R$15k / B R$20k. Mentoria Primia real é mais densa (C/D R$30-50k).
+- [Arquitetura de marca Primia](project_arquitetura_marca_primia.md) — Primia = marca-guarda (Mentoria+Método+Stack+Webtx). Bvaz separada como parceria.
+- [Método Primia 5C](project_metodo_primia_5c.md) — Clareza/Cartografia/Construção/Conexão/Colheita. Metáfora arquitetura. 8 sem.
+- [Stack Primia — 8 agentes oficiais](project_stack_primia.md) — OS, Pages, Search, Writer, Analyst, Dev, Diagnose, Recap. Substitui nomenclatura antiga.
+- [Landing oficial metodo.primia.ai](project_metodo_primia_landing_oficial.md) — números autoritativos. Tagline "Substitui 8+ Profissionais". Fonte de verdade.
+- [Proposta Mentoria Primia (deck)](project_proposta_mentoria_primia.md) — proposta-mentoria-primia.vercel.app. 30 slides Primia-OS. CTA WhatsApp.
+- [Referência Elton Euller](reference_elton_euller.md) — eng. reversa "O Ponto Cego". Teoria da Permissão + 3 perfis + Marca Passos.
+- [Acentuação em conteúdo PT-BR](feedback_acentuacao_pt_br.md) — sempre acentos corretos em markdown/copy/slides. Não em código/nomes de arquivo.
+- [CSV do Active Campaign tem aspas mal-escapadas](feedback_csv_active_campaign_quirks.md) — validar com diagnóstico Python antes de importar.
+- [Padrão share tokens slug-based](feedback_share_tokens_pattern.md) — slug + RPC SECURITY DEFINER + vercel.json SPA rewrite. Validado Commander.
+- [Facets pattern em filtros multi-select](feedback_facets_pattern_filtros.md) — 2 chamadas: stats (com filtros) + facets (sem multi). Senão opções somem.
+- [Filtros multi-tenant atrelados ao cliente ativo](feedback_filtros_atrelados_cliente_ativo.md) — passar client_id na RPC + queryKey em todo hook.
+- [PostgREST `.or()` não aceita cast em JSONB](feedback_postgrest_or_jsonb_cast.md) — busca livre em JSONB via RPC SECURITY DEFINER. Sanitizar `,` e `)`.
+- [Supabase ES256 + edge function auth](feedback_supabase_es256_jwt.md) — admin client + `getUser(token)` explícito. Migrar funções legadas.
+- [Modo "ver como usuário" via hook central](feedback_view_as_override_pattern.md) — `useXxxRaw` + override via Context. Pré-req: roles não espalhados no auth state.
+- [MVs híbridas p/ dashboards grandes](feedback_mvs_para_dashboards_grandes.md) — >100k linhas: N MVs + função híbrida + cron CONCURRENTLY. Validado get_lead_stats.
+- [Eng reversa Grupo Advogado10X (Jayme)](project_eng_reverse_10x.md) — destilação site Cristiano P. Ferreira p/ Jayme/Advox. eng-reverse-10x, noindex.
+- [Mentorado Jayme Gabriel (Instituto Advox)](project_jayme_gabriel_advox.md) — mentoria Huendel. R$30k em aberto. Vender briefing pre-call, não Commander.
+- [Design system oficial CIS](feedback_design_system_cis_oficial.md) — dark navy #060D2C + amarelo #FFBA06 + verde CTA. Skill `landing-cis-presencial`.
+- [Brand Brief Primia 2026](project_primia_brand_brief_2026.md) — categoria "squad técnico de IA p/ lançamentos high-ticket". Tagline "IA que aguenta lançamento."
+- [Categoria angular Primia 2026](project_primia_categoria_2026.md) — squad técnico de IA, NÃO agência de IA genérica. Defesa via portfólio + números.
+- [Cor da marca Primia = roxo #8356E7](feedback_primia_cor_marca_roxo.md) — roxo oficial (verde-limão descontinuado). Schibsted Grotesk + JetBrains Mono + Instrument Serif.
+- [Primia NÃO vende IA](feedback_primia_nao_vende_ia.md) — sujeito de headline nunca "IA". Sempre Primia/cliente/entregável. IA é o COMO.
+- [Primia Play — área de membros white-label](project_primia_play.md) — Lovable+Supabase, repo primiaplay. Pendente tracking, signed URLs Bunny, parsers.
+- [Deploy esteira-bvaz.vercel.app](project_esteira_bvaz_vercel.md) — 10 movimentos da esteira Bvaz. Escada 97 → 25k → 120k.
+- [/plugin quebra com source "local"](feedback_plugin_marketplace_source_directory.md) — usar `"source": "directory"` p/ marketplace local. Corrigido 2026-06-21.
+- [Modelo "página gestão"](feedback_modelo_pagina_gestao.md) — trigger "página gestão"/"modelo página gestão" = base em `tour-gestao-empresarial/index.html` (Febracis RJ). Ler o arquivo atual antes de gerar.

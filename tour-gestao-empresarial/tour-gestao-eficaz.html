@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gestão Eficaz — Ferramentas para o Sucesso Empresarial | Febracis RJ</title>
+<meta name="description" content="Sua empresa não precisa de mais esforço. Precisa de gestão. Estruture seu time, seus processos e seus indicadores. 16 de Maio no Riocentro, Rio de Janeiro.">
+<link rel="icon" type="image/png" href="https://febracisriodejaneiro.com.br/wp-content/uploads/2024/08/icone-febracis.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#0A0905;
+  --dark-2:#141414;
+  --navy:#2C2F3A;
+  --gold:#C89C3C;
+  --gold-soft:rgba(200,156,60,.35);
+  --green:#52A956;
+  --green-glow:rgba(82,169,86,.45);
+  --white:#FFFFFF;
+  --off:#FFFEF9;
+  --font-title:'Sora',sans-serif;
+  --font-sub:'Montserrat',sans-serif;
+  --font-body:'Roboto',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:var(--off);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+
+/* ===== CTA primário (regra: nunca ghost, sempre destaque) ===== */
+.cta{
+  display:inline-block;
+  background:var(--green);
+  color:var(--white);
+  font-family:var(--font-title);
+  font-weight:700;
+  font-size:1.05rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  text-decoration:none;
+  text-align:center;
+  padding:19px 42px;
+  border-radius:12px;
+  box-shadow:0 10px 28px var(--green-glow);
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 16px 38px var(--green-glow);background:#5cbb60}
+.cta--pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{
+  0%,100%{box-shadow:0 10px 28px var(--green-glow)}
+  50%{box-shadow:0 10px 28px var(--green-glow), 0 0 0 14px rgba(82,169,86,0)}
+}
+
+/* ===== Divisor dourado ===== */
+.divisor-gold{height:2px;background:url('https://febracisriodejaneiro.com.br/wp-content/uploads/2024/08/febracis_metodoCis_pgcap_v1_img_secondSection_divisor_2_dm_ricti.webp') center/cover no-repeat, linear-gradient(90deg,transparent 0%,var(--gold) 50%,transparent 100%)}
+
+/* ===== Hero ===== */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:url('https://febracisriodejaneiro.com.br/wp-content/uploads/2025/06/BANNER-GESTAO-EFICAZ4-1.png') center/cover no-repeat #0A0905;
+  padding:60px 0;
+}
+.hero-inner{max-width:600px}
+.hero-logo{width:170px;margin-bottom:28px}
+.hero-date{
+  display:inline-block;
+  font-family:var(--font-sub);
+  font-weight:700;
+  font-size:1.05rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid var(--gold-soft);
+  border-radius:999px;
+  padding:9px 22px;
+  margin-bottom:26px;
+}
+.hero h1{
+  font-family:var(--font-title);
+  font-weight:800;
+  font-size:2.7rem;
+  line-height:1.2;
+  color:var(--white);
+  margin-bottom:20px;
+}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{
+  font-family:var(--font-sub);
+  font-size:1.25rem;
+  font-weight:500;
+  color:var(--off);
+  opacity:.92;
+  margin-bottom:36px;
+}
+.cta-mobile-label{display:none}
+
+/* ===== Seção Dados ===== */
+.dados{background:var(--dark)}
+.section-title{
+  font-family:var(--font-title);
+  font-weight:700;
+  font-size:2.1rem;
+  line-height:1.25;
+  text-align:center;
+  color:var(--white);
+  max-width:900px;
+  margin:0 auto 24px;
+}
+.section-title .gold{color:var(--gold)}
+.dados-recortes{max-width:720px;margin:40px auto 56px;border-radius:16px;overflow:hidden}
+.dados-sub{
+  font-family:var(--font-sub);
+  font-size:1.3rem;
+  font-weight:600;
+  text-align:center;
+  color:var(--off);
+  max-width:820px;
+  margin:0 auto 48px;
+}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.stat{
+  background:var(--dark-2);
+  border:1px solid var(--gold-soft);
+  border-radius:18px;
+  padding:38px 30px;
+  text-align:center;
+}
+.stat-num{
+  font-family:var(--font-title);
+  font-weight:800;
+  font-size:3.6rem;
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:16px;
+}
+.stat p{font-size:1rem;color:var(--off);opacity:.9}
+
+/* ===== Metodologia / Pilares ===== */
+.pilares{background:var(--dark);padding-top:0}
+.pilares-intro{text-align:center;max-width:860px;margin:0 auto 56px}
+.pilares-intro h3{
+  font-family:var(--font-title);
+  font-weight:700;
+  font-size:1.7rem;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+.pilares-intro p{margin-bottom:14px;opacity:.92}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:56px}
+.card{
+  background:var(--dark-2);
+  border:1px solid var(--gold-soft);
+  border-radius:18px;
+  padding:34px 28px;
+  transition:transform .25s ease,border-color .25s ease;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.card-icon{
+  width:46px;height:46px;
+  border-radius:50%;
+  background:rgba(200,156,60,.12);
+  border:1px solid var(--gold-soft);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+.card-icon svg{width:22px;height:22px;stroke:var(--gold)}
+.card h4{
+  font-family:var(--font-sub);
+  font-weight:700;
+  font-size:1.05rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:12px;
+}
+.card p{font-size:.97rem;opacity:.88}
+.center{text-align:center}
+
+/* ===== Uma Gestão Realmente Eficaz ===== */
+.gestao{background:var(--dark-2)}
+.gestao-inner{max-width:820px;margin:0 auto;text-align:center}
+.gestao h2{
+  font-family:var(--font-title);
+  font-weight:800;
+  font-size:2.4rem;
+  color:var(--gold);
+  margin-bottom:28px;
+}
+.gestao p{font-size:1.12rem;margin-bottom:18px;opacity:.93}
+.gestao p strong{color:var(--white)}
+.gestao .cta{margin-top:22px}
+
+/* ===== Treinamento / Vídeo ===== */
+.treinamento{background:var(--dark)}
+.treinamento-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:56px;
+  align-items:center;
+  margin-top:48px;
+}
+.video-wrap{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--gold-soft);aspect-ratio:16/9;background:#000;cursor:pointer;margin-bottom:36px}
+.video-wrap img{width:100%;height:100%;object-fit:cover;opacity:.92}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.play-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:84px;height:84px;border-radius:50%;
+  background:var(--green);
+  box-shadow:0 10px 30px var(--green-glow);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .25s ease;
+}
+.video-wrap:hover .play-btn{transform:translate(-50%,-50%) scale(1.08)}
+.play-btn svg{width:30px;height:30px;fill:#fff;margin-left:5px}
+.treinamento-copy h5{
+  font-family:var(--font-sub);
+  font-weight:600;
+  font-size:1.15rem;
+  line-height:1.55;
+  color:var(--off);
+  margin-bottom:26px;
+}
+.como-label{
+  font-family:var(--font-title);
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-size:1rem;
+  margin-bottom:18px;
+}
+.beneficios{list-style:none;margin-bottom:34px}
+.beneficios li{
+  position:relative;
+  padding-left:32px;
+  margin-bottom:12px;
+  font-family:var(--font-sub);
+  font-weight:500;
+  font-size:1.08rem;
+}
+.beneficios li::before{
+  content:'';
+  position:absolute;left:0;top:7px;
+  width:16px;height:16px;
+  border-radius:50%;
+  background:var(--gold);
+  clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.mockup{border-radius:18px;overflow:hidden}
+
+/* ===== Emerson ===== */
+.emerson{
+  background:url('https://febracisriodejaneiro.com.br/wp-content/uploads/2026/07/bg-secao-emerson.png') center/cover no-repeat var(--navy);
+}
+.emerson-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:56px;
+  align-items:center;
+}
+.emerson-foto{border-radius:20px;overflow:hidden;border:1px solid var(--gold-soft);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.emerson-label{
+  font-family:var(--font-sub);
+  font-size:1.15rem;
+  color:var(--off);
+  opacity:.85;
+  margin-bottom:6px;
+}
+.emerson h2{
+  font-family:var(--font-title);
+  font-weight:800;
+  font-size:2.5rem;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+.emerson-cargo{
+  font-family:var(--font-sub);
+  font-weight:700;
+  font-size:.95rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--white);
+  margin-bottom:22px;
+}
+.emerson p{font-size:1rem;opacity:.9;margin-bottom:16px}
+.emerson .cta{margin-top:14px}
+
+/* ===== Oferta ===== */
+.oferta{background:var(--dark-2)}
+.oferta-inner{max-width:760px;margin:0 auto;text-align:center}
+.oferta-card{
+  max-width:520px;
+  margin:44px auto 0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(200,156,60,.14),transparent 60%),var(--dark);
+  border:1px solid var(--gold-soft);
+  border-radius:20px;
+  padding:44px 34px;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+}
+.oferta-badge{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--dark);
+  font-family:var(--font-title);
+  font-weight:700;
+  font-size:.8rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:7px 18px;
+  border-radius:999px;
+  margin-bottom:22px;
+}
+.oferta-meta{color:var(--off);opacity:.7;font-family:var(--font-sub);font-size:.95rem;margin-bottom:28px}
+.oferta-from{color:var(--off);opacity:.55;font-size:1.15rem;text-decoration:line-through;margin-bottom:4px}
+.oferta-forlabel{display:block;font-family:var(--font-sub);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:2px}
+.oferta-value{font-family:var(--font-title);font-weight:800;font-size:4rem;line-height:1;color:var(--gold)}
+.oferta-cents{font-size:1.7rem;vertical-align:super}
+.oferta-parc{font-size:1.05rem;margin:14px 0 30px;opacity:.95}
+.oferta-parc strong{color:var(--white)}
+.oferta-card .cta{width:100%}
+.oferta-note{font-size:.82rem;opacity:.6;margin-top:18px}
+@media(max-width:767px){.oferta-value{font-size:3.2rem}}
+
+/* ===== Local / Inscrição ===== */
+.local{background:var(--dark)}
+.local-inner{max-width:760px;margin:0 auto;text-align:center}
+.local-logo{width:150px;margin:0 auto 30px}
+.local h2{
+  font-family:var(--font-title);
+  font-weight:800;
+  font-size:2.2rem;
+  color:var(--white);
+  letter-spacing:.06em;
+}
+.local .data{
+  font-family:var(--font-title);
+  font-weight:800;
+  font-size:2.6rem;
+  color:var(--gold);
+  margin-bottom:34px;
+}
+.local-foto{border-radius:18px;overflow:hidden;border:1px solid var(--gold-soft);margin-bottom:28px}
+.local-endereco{font-family:var(--font-sub);font-size:1.05rem;opacity:.9;margin-bottom:36px}
+
+/* ===== WhatsApp ===== */
+.whats{background:var(--dark-2);text-align:center}
+.whats h2{
+  font-family:var(--font-title);
+  font-weight:700;
+  font-size:1.6rem;
+  color:var(--off);
+  margin-bottom:8px;
+}
+.whats .destaque{
+  font-family:var(--font-title);
+  font-weight:800;
+  font-size:2.2rem;
+  color:var(--gold);
+  margin-bottom:34px;
+}
+.cta--whats{display:inline-flex;align-items:center;gap:12px}
+.cta--whats svg{width:24px;height:24px;fill:#fff}
+
+/* ===== Footer ===== */
+footer{background:var(--dark-2);border-top:1px solid rgba(255,255,255,.08);padding:56px 0 40px;text-align:center}
+.footer-logos{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:30px}
+.footer-logos img{height:64px;width:auto}
+footer p{font-size:.88rem;opacity:.65;max-width:820px;margin:0 auto 12px}
+.footer-links{font-family:var(--font-sub);font-size:.9rem;margin-bottom:18px}
+.footer-links a{color:var(--gold);text-decoration:none}
+.footer-links a:hover{text-decoration:underline}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:translateY(0)}
+
+/* ===== Tablet ≤1024 ===== */
+@media(max-width:1024px){
+  .hero{
+    background:url('https://febracisriodejaneiro.com.br/wp-content/uploads/2026/07/banner-hero-mobile.png') center top/cover no-repeat #0A0905;
+    align-items:flex-end;
+    min-height:100vh;
+    position:relative;
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,9,5,0) 30%,rgba(10,9,5,.88) 68%,#0A0905 100%);
+  }
+  .hero .container{position:relative;z-index:1}
+  .hero-inner{max-width:640px;margin:0 auto;text-align:center;padding-bottom:40px}
+  .hero-logo{margin:0 auto 24px;width:130px}
+  .hero h1{font-size:2.15rem}
+  .stats{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .treinamento-grid{grid-template-columns:1fr;gap:40px}
+  .mockup{max-width:480px;margin:0 auto}
+  .emerson-grid{grid-template-columns:1fr;gap:40px}
+  .emerson-foto{max-width:420px;margin:0 auto}
+  .emerson-grid > div:last-child{text-align:center}
+}
+
+/* ===== Mobile ≤767 ===== */
+@media(max-width:767px){
+  section{padding:64px 0}
+  .hero h1{font-size:1.75rem}
+  .hero-sub{font-size:1.05rem}
+  .hero-date{font-size:.9rem;padding:8px 18px}
+  .cta{width:100%;padding:18px 24px;font-size:.98rem}
+  .cta-desktop-label{display:none}
+  .cta-mobile-label{display:inline}
+  .section-title{font-size:1.55rem}
+  .dados-sub{font-size:1.1rem}
+  .stat-num{font-size:3rem}
+  .cards{grid-template-columns:1fr}
+  .gestao h2{font-size:1.8rem}
+  .gestao p{font-size:1.02rem}
+  .emerson h2{font-size:1.9rem}
+  .local h2{font-size:1.6rem}
+  .local .data{font-size:2rem}
+  .whats .destaque{font-size:1.6rem}
+  .footer-logos img{height:48px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="content">
+  <div class="container">
+    <div class="hero-inner">
+      <img class="hero-logo" src="https://febracisriodejaneiro.com.br/wp-content/uploads/2025/05/LOGO_GESTAO_EFICAZ_VERTICAL.png" alt="Gestão Eficaz — Febracis RJ">
+      <div class="hero-date">16 de Maio &nbsp;|&nbsp; Riocentro</div>
+      <h1>Sua empresa não precisa de mais esforço. Precisa de <em>GESTÃO</em>.</h1>
+      <p class="hero-sub">A imersão presencial que estrutura seu time, seus processos e seus indicadores para a empresa crescer sem depender de você apagando incêndio o dia inteiro.</p>
+      <a class="cta cta--pulse" href="#form">
+        <span class="cta-desktop-label">QUERO GARANTIR MINHA VAGA</span><span class="cta-mobile-label">QUERO RESULTADOS AGORA</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="divisor-gold"></div>
+
+<!-- ============ DADOS ============ -->
+<section class="dados">
+  <div class="container">
+    <h2 class="section-title reveal">A falta de gestão eficaz está levando milhares de empresas à falência. <span class="gold">Veja os dados</span></h2>
+    <div class="dados-recortes reveal">
+      <img src="https://febracisriodejaneiro.com.br/wp-content/uploads/2025/06/slide_pag_captura-1.png.webp" alt="Manchetes: empresas fechando no Brasil por falta de gestão">
+    </div>
+      <p class="dados-sub reveal">Antes de te mostrar os pilares dessa metodologia, você precisa entender o cenário atual:</p>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat-num">09%</div>
+        <p>Apenas 9% dos microempreendedores e 10% das pequenas empresas fazem algum tipo de planejamento.</p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">60%</div>
+        <p>60% das empresas no Brasil fecham ainda no primeiro ano de atividade — e a má gestão está entre as principais causas</p>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">79%</div>
+        <p>79% das empresas brasileiras enfrentam problemas de gestão que travam o crescimento e ameaçam a sustentabilidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILARES ============ -->
+<section class="pilares">
+  <div class="container">
+    <div class="pilares-intro reveal">
+      <h3>O problema quase nunca é o mercado. É a gestão.</h3>
+      <p>Uma única contratação errada custa cerca de R$ 15 mil. Com turnover de 35% ao ano, uma empresa de 100 pessoas desperdiça mais de R$ 400 mil por ano trocando gente. E 87% das demissões são por questões comportamentais, não técnicas.</p>
+      <p>Esta imersão entrega as ferramentas práticas de gestão de pessoas, processos e indicadores para você parar de perder dinheiro e assumir o comando real da empresa.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Estruturação de Time</h4>
+        <p>O custo real da contratação errada e os critérios comportamentais na seleção. Aprenda os 3 passos para colocar a pessoa certa no lugar certo e parar de perder dinheiro com turnover.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Cultura e Liderança</h4>
+        <p>Cultura é criada por quem você é, ou por quem você tolera. Acabe com a liderança permissiva que corrói o resultado e defina a cultura pela sua identidade como líder.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Rotina e Produtividade Gerencial</h4>
+        <p>Foque no que é importante, não no que é urgente. Gerenciar não é apagar incêndio. Rotinas e produtividade gerencial para o time entregar com consistência.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Gestão por Indicadores</h4>
+        <p>Saia da miopia empresarial e do achismo. Gestão por KPIs de fim (receita, conversão, ticket, CAC, retenção) para decidir com números e enxergar o negócio de cima.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Processos e Execução</h4>
+        <p>Mapeamento de processos e as premissas da execução eficaz. A maioria das reestruturações falha porque não sabe executar. Aqui você sai sabendo colocar o plano em prática.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h4>Visão de Dono</h4>
+        <p>Saia da operação e assuma o nível estratégico. Enxergue o negócio como um todo para a empresa crescer além do seu limite pessoal e do seu tempo.</p>
+      </div>
+    </div>
+    <div class="center reveal">
+      <a class="cta" href="#form">QUERO GARANTIR MINHA VAGA</a>
+    </div>
+  </div>
+</section>
+
+<div class="divisor-gold"></div>
+
+<!-- ============ UMA GESTÃO REALMENTE EFICAZ ============ -->
+<section class="gestao">
+  <div class="container">
+    <div class="gestao-inner reveal">
+      <h2>Uma Gestão Realmente Eficaz</h2>
+      <p>Uma imersão prática para reestruturar seus processos, alinhar sua equipe e tomar decisões com clareza e impacto, sem achismo, sobrecarga ou desperdício de energia.</p>
+      <p><strong>Ideal para empresários, sócios, gestores e líderes que querem sair do operacional e assumir o comando real da empresa.</strong></p>
+      <p>Não é motivação. São ferramentas de gestão de pessoas, processos e indicadores, aplicadas na sua realidade.</p>
+      <p>Gestão não é dom. É método aplicado com disciplina, equipe alinhada e decisões inteligentes.</p>
+      <a class="cta" href="#form">Fazer Inscrição agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TREINAMENTO ============ -->
+<section class="treinamento">
+  <div class="container">
+    <h2 class="section-title reveal">Treinamento para <span class="gold">acelerar seus resultados</span></h2>
+    <div class="treinamento-grid">
+      <div>
+        <div class="video-wrap reveal" id="video" data-yt="BcZGhrjkGPc">
+          <img src="https://febracisriodejaneiro.com.br/wp-content/uploads/2025/07/7ERRO-DE-QUEM-COMECA-A-EMPREENDER-HORIZONTAL-scaled.png" alt="Vídeo: os erros de quem começa a empreender" loading="lazy">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="treinamento-copy reveal">
+          <h5>Estruture sua equipe e seus processos com foco em performance, domine a gestão de pessoas e defina KPIs claros e eficientes.</h5>
+          <p class="como-label">Como faremos isso?</p>
+          <ul class="beneficios">
+            <li>Aumentando seus resultados</li>
+            <li>Reduzindo custos com contratações</li>
+            <li>Planejando um crescimento sólido</li>
+            <li>Desenvolvendo indicadores de sucesso</li>
+          </ul>
+          <a class="cta" href="#form">QUERO DESBLOQUEAR ESSA GESTÃO</a>
+        </div>
+      </div>
+      <div class="mockup reveal">
+        <img src="https://febracisriodejaneiro.com.br/wp-content/uploads/2025/05/ChatGPT-Image-30_05_2025-19_38_00.png" alt="Participantes e palestrante em treinamento presencial" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMERSON DOBLAS ============ -->
+<section class="emerson">
+  <div class="container">
+    <div class="emerson-grid">
+      <div class="emerson-foto reveal">
+        <img src="https://febracisriodejaneiro.com.br/wp-content/uploads/2025/06/freepik__emerson-fashion-editorial-highend-corporate-portra__45022.jpeg" alt="Emerson Doblas" loading="lazy">
+      </div>
+      <div class="reveal">
+        <p class="emerson-label">conheça</p>
+        <h2>Emerson Doblas</h2>
+        <p class="emerson-cargo">Diretor franqueado da Febracis Rio de Janeiro, Brasília e Orlando</p>
+        <p>Emerson Doblas é especialista em gestão empresarial, finanças e investimentos, possui certificação ANCORD e atua como assessor de investimentos no Brasil.</p>
+        <p>Experiência de mais de 10 anos atuando em multinacionais do setor de óleo e gás. Utiliza toda a sua experiência para apoiar empresários e empreendedores a otimizar a gestão, potencializar lucros e alcançar seus objetivos financeiros.</p>
+        <p>Formado pela Escola de Formação de Oficiais da Marinha Mercante (EFOMM), Emerson possui pós-graduações em Engenharia de Controle e Automação; em Neurociência e Comportamento Humano; e MBAs em Planejamento Estratégico Financeiro; em Auditoria, Controladoria e Contabilidade; em Marketing Digital e Análise de Dados com Inteligência Artificial.</p>
+        <p>Atualmente, também atua como professor na Escola de Negócios Interagir, da Igreja Verbo da Vida, no ministério de empreendedores BOSS, da Igreja Novos Começos e treinador palestrante na Escola de Formação dos Fuzileiros Navais da Marinha do Brasil (CIAMPA) formando fuzileiros navais que serão enviados para todo o território do Brasil.</p>
+        <a class="cta" href="#form">QUERO GARANTIR MINHA INSCRIÇÃO</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor-gold"></div>
+
+<!-- ============ OFERTA ============ -->
+<section class="oferta">
+  <div class="container">
+    <div class="oferta-inner reveal">
+      <h2 class="section-title">Quanto vale parar de perder dinheiro com <span class="gold">gestão amadora</span>?</h2>
+      <p class="dados-sub">Uma única contratação errada custa cerca de R$ 15 mil. O Workshop Gestão Eficaz custa uma fração disso e te dá as ferramentas para não repetir o erro nunca mais.</p>
+    </div>
+    <div class="oferta-card reveal">
+      <div class="oferta-badge">Workshop Gestão Eficaz</div>
+      <div class="oferta-meta">16 de Maio &middot; Riocentro &middot; Rio de Janeiro</div>
+      <div class="oferta-from">De R$ 597,00</div>
+      <span class="oferta-forlabel">Por apenas</span>
+      <div class="oferta-value">R$ 297<span class="oferta-cents">,00</span></div>
+      <p class="oferta-parc">ou em até <strong>12x de R$ 29,70</strong></p>
+      <a class="cta cta--pulse" href="https://www.e-inscricao.com/febracisrj/gestaoeficazriocentro160526" target="_blank" rel="noopener">QUERO GARANTIR MINHA VAGA</a>
+      <p class="oferta-note">Vagas limitadas &middot; pagamento seguro &middot; garantia de 7 dias</p>
+    </div>
+  </div>
+</section>
+
+<div class="divisor-gold"></div>
+
+<!-- ============ LOCAL / INSCRIÇÃO ============ -->
+<section class="local" id="form">
+  <div class="container">
+    <div class="local-inner">
+      <img class="local-logo reveal" src="https://febracisriodejaneiro.com.br/wp-content/uploads/2025/05/LOGO_GESTAO_EFICAZ_VERTICAL.png" alt="Gestão Eficaz">
+      <h2 class="reveal">RIO DE JANEIRO</h2>
+      <p class="data reveal">16 de Maio</p>
+      <div class="local-foto reveal">
+        <img src="https://febracisriodejaneiro.com.br/wp-content/uploads/elementor/thumbs/pavilhao-escola-de-negocio-1-scaled-1-r6lb683lvhcl1kstpb4wzbylpebetgwdz2olbl9yjk.png" alt="Riocentro — pavilhão do evento" loading="lazy">
+      </div>
+      <p class="local-endereco reveal">Riocentro — Av. Salvador Allende, 6555 – Barra Olímpica, Rio de Janeiro – RJ, 22783-127</p>
+      <a class="cta cta--pulse reveal" href="https://www.e-inscricao.com/febracisrj/gestaoeficazriocentro160526" target="_blank" rel="noopener">GARANTIR MINHA INSCRIÇÃO</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHATSAPP ============ -->
+<section class="whats">
+  <div class="container reveal">
+    <h2>AINDA COM DÚVIDAS?</h2>
+    <p class="destaque">Chame meu time no WhatsApp</p>
+    <a class="cta cta--whats" href="https://wa.me/5521995625554?text=Ol%C3%A1!%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Workshop%20de%20Gest%C3%A3o%20Eficaz." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Clique aqui
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-logos">
+      <img src="https://febracisriodejaneiro.com.br/wp-content/uploads/2026/05/cropped-logo-cis-em-alta.png" alt="Método CIS">
+      <img src="https://febracisriodejaneiro.com.br/wp-content/uploads/2024/08/icone-febracis.png" alt="Febracis">
+    </div>
+    <p>JIREH COACHING E ASSESSORIA EMPRESARIAL LTDA. Todos os direitos reservados.</p>
+    <p>Avenida Salvador Allende, 6555, Riocentro, Portão B – Pavilhão das Artes, sala 106, Rio de Janeiro, RJ / Jacarepaguá / 22780-160</p>
+    <p>CNPJ: 52.134.324/0001-16</p>
+    <p class="footer-links">Avisos legais &nbsp;|&nbsp; <a href="https://static.febracis.com.br/wp-content/uploads/2024/05/16100717/2024_05_10-Febracis-Politica-de-Privacidade-Externa.pdf" target="_blank" rel="noopener">Política de privacidade</a> &nbsp;|&nbsp; Referências científicas &nbsp;|&nbsp; Política de Privacidade e Cookies &nbsp;|&nbsp; © 2026</p>
+    <p>Este site não é afiliado ao Facebook, Meta, Google ou qualquer rede social ou recursos de marketing. A compra desse material não garante nenhum tipo de resultado. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais de alunos.</p>
+    <p>Todos os direitos reservados</p>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+}, { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Lite YouTube embed
+const vid = document.getElementById('video');
+vid.addEventListener('click', () => {
+  const id = vid.dataset.yt;
+  const ifr = document.createElement('iframe');
+  ifr.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+  ifr.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  ifr.allowFullscreen = true;
+  vid.innerHTML = '';
+  vid.appendChild(ifr);
+}, { once: true });
+</script>
+
+</body>
+</html>

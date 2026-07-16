@@ -1,0 +1,512 @@
+(0:02 - 0:11)
+Pessoal, boa tarde. Infelizmente a gente não conseguiu se reunir. A agenda de vocês é muito corrida, a nossa também.
+
+(0:11 - 0:44)
+Então, vamos correr atrás desse tempo perdido, né? Bom, por que que eu pedi para vocês página, pedi anúncios, pedi tudo que vocês têm disponíveis aí para a gente? Para a gente fazer uma análise, fazer um cruzamento de dados, e foi isso que foi feito aqui. Vamos lá. Além de ter analisado isso, que tem todos os anúncios que vocês nos enviaram, infelizmente aqui não tem a métrica de venda de anúncio.
+
+(0:46 - 1:13)
+Esse anúncio trouxe tantas vendas, esse aqui trouxe tantas, mas a gente, como já estamos a um período já na febracidade, a gente já conseguiu, e temos alguns outros mentorados também, a gente conseguiu fazer uma estimativa aqui de venda por anúncio. Bom, vamos lá. Aí chegamos aqui nesses resultados aqui.
+
+(1:15 - 1:36)
+Três páginas e três hipóteses de copy. Como assim? Bom, voltando que é com base no que vocês nos passaram. A gente tem os anúncios que vocês enviaram, tem a página e tem o conhecimento do Paulo também, e a gente já conseguiu extrair esse período trabalhando junto com ele.
+
+(1:37 - 1:51)
+Então vamos lá. Variantes. Cada cluster de criativo cai no LP certo, ou seja, a gente está rodando três, identificamos ali três anúncios diferentes e onde cada anúncio direcionaria para uma página específica.
+
+(1:51 - 2:09)
+Então, por exemplo, tem um dos anúncios que o Paulo fala, ele fala muito sobre a sabotagem. Então, a pessoa que mais sabota está dentro de você. Ou seja, esse anúncio, ele seria direcionado para uma página específica, exclusiva que complementa esse anúncio aqui.
+
+(2:11 - 2:14)
+Cluster de anúncio espião. Perdão, campeão. Auto-sabotagem.
+
+(2:14 - 2:21)
+Persona. Seria empresários entre 30 e 50 anos que já conquistou ou está perto de conquistar a virada. Tom.
+
+(2:22 - 2:28)
+Confrontador. Racional. A outra versão de página seria mente inimiga.
+
+(2:28 - 2:35)
+Sua mente virou seu maior inimigo. O cluster. Sua mente é seu maior inimigo e você sente que está travada e não sabe por quê.
+
+(2:36 - 2:40)
+Persona. Executivo com síndrome de impostor e ansiedade. Tom introspectivo.
+
+(2:42 - 2:45)
+Versão três. Compre um ingresso e leve mais uma pessoa. Cluster.
+
+(2:45 - 2:49)
+Quero comprar um e levar o outro. Persona. Casais, sócios, pais e filhos.
+
+(2:49 - 2:53)
+Tom de oferta com altruísmo. Lotes diferentes. Individual.
+
+(2:54 - 2:57)
+Mais. Compre um. Mais um.
+
+(2:58 - 3:17)
+Antes de subir, leia o dossiê estratégico que é o que eu vou mostrar para vocês aqui agora. E aqui são sugestões de como que a gente usaria as URE dos links das páginas. Parte de UTM para ter todo o traqueamento que na nossa reunião o pessoal Bruno informou que vocês não tinham muita essa.
+
+(3:18 - 3:22)
+Essas informações de traqueamento. Então vamos lá. Vamos pro dossiê aqui.
+
+(3:24 - 3:31)
+Deixa eu. Bom, dossiê. A gente está com a página de vocês aqui.
+
+(3:31 - 3:34)
+Foi o primeiro analisado. Vou pro dossiê aqui. Bom, então vamos lá.
+
+(3:35 - 3:44)
+O que é o dossiê? O dossiê ele vai. Eu costumo falar que é uma defesa de. É como se fosse uma defesa de estratégia.
+
+(3:46 - 3:58)
+Por que refazer as páginas do CIS presencial no Rio de Janeiro? A página atual é institucional. Vende o método CIS como conceito. Esta proposta transforma cada visitante em lead qualificado pronto para comprar.
+
+(3:58 - 4:06)
+Usando o vocabulário que o próprio Paulo Vieira fala nos anúncios que mais converte hoje em dia. Então vamos lá. Página institucional.
+
+(4:07 - 4:16)
+Vivo seu máximo potencial. Domine e desbloqueie em apenas três dias. A principal habilidade dos empresários, atletas e pessoas de maior sucesso no mundo.
+
+(4:17 - 4:23)
+Inteligência emocional. Então está muito institucional aqui. Falta um CTA, né? Que seria um botão de ação aqui.
+
+(4:23 - 4:33)
+Pro lead ou clicar pra saber mais ou pra já comprar direto. Então vamos lá. E aqui eu tenho alguns itens que nós fizemos.
+
+(4:33 - 4:42)
+Diagnóstico, comparativo, decisões. Pra checkout, tom de inspiração, projeção. O que vem depois da LP é a parte de decisão, né? Que cabe a vocês aí.
+
+(4:43 - 4:55)
+Então vamos lá. O que está acontecendo hoje em números? Antes de defender qualquer estrutura nova é preciso olhar para o que o dado diz. Os relatórios de novembro de 2025 mostram a situação real.
+
+(4:55 - 5:17)
+Então, mais uma vez, estamos falando com base nisso aqui. E com base naqueles documentos que vocês enviaram, naqueles extratos, naqueles relatórios que tinham essas mais informações. R$ 37,6 mil investidos em tráfego em novembro de 2025.
+
+(5:17 - 5:28)
+Conversão crítica. Foram investidos para captar 2.779 cadastros de método CIS. Dessa colheita vieram apenas nove vendas via tráfego em março de 2025.
+
+(5:28 - 5:44)
+O lead chega, o lead não converte. Isso aqui foi informação que o pessoal nos passou na reunião que tivemos, o Bruno com a Larissa. Traqueamento quebrado.
+
+(5:45 - 5:48)
+Tempo de carregamento da página atual. Média de 11 segundos. Muito lento.
+
+(5:49 - 5:59)
+Com nota D no GT-Max, o pixel do Facebook carrega como o 31º item da página. Deveria ser o segundo. Você paga pelo clique, mas não consegue rastrear a maior parte deles.
+
+(6:01 - 6:11)
+68% do público são mulheres entre 35 e 44 anos. 96% do Rio de Janeiro. Persona não endereçada.
+
+(6:12 - 6:24)
+68% da sua audiência que paga é uma mulher executiva carioca entre 35 e 44 anos. Página atual fala com todo mundo. Você está pagando para alcançar essa persona específica e oferecendo uma cópia genérica.
+
+(6:25 - 6:38)
+Ou seja, que a gente acha até um gap para incluir uma página a mais onde é falar com mulheres. Tipo o que nós fizemos aqui na Febracis Bahia. Aqui, a página principal fala com o pessoal do Salvador.
+
+(6:40 - 6:52)
+E aí temos... Vê três, acho que fala com mulher, empresária. Olha, ninguém parou uma mulher que tem metas claras. Se você decidiu pagar o preço do crescimento, do enriquecimento, da abundância, essa emersão é para você.
+
+(6:52 - 6:58)
+Três dias presenciais com o Lúcio Mariano e tal. E vai. Então assim, aqui a gente está rodando, acho que quatro, cinco páginas.
+
+(7:00 - 7:17)
+Onde cada página... Vem de um anúncio específico que vai complementar o que esse anúncio está falando. Então, a gente conseguiu identificar oito pontos que estão deixando dinheiro na mesa. Ponto um, a página institucional.
+
+(7:17 - 7:21)
+Não é uma página de venda. Ela vem de um conceito. Método CIS no abstrato.
+
+(7:21 - 7:30)
+Não vem de um evento de 5 a 7 de agosto de Rio de Janeiro. Falta data, falta local, agenda, lotes, ingresso, garantia. Tudo que faz alguém comprar.
+
+(7:30 - 7:38)
+Aqui, tinha que estar aqui na frente, aqui em cima. Data. Vou trazer o exemplo da... Aqui que a gente fez, da Doce.
+
+(7:39 - 7:52)
+Data, evento, tempo de evento. Isso aqui é um outro produto, mas traz o sentimento do que a página precisa. Quebra de mensagens entre anúncio e página.
+
+(7:52 - 8:03)
+Anúncio campeão. Desinvestir 8.825 reais. Fala acabar com a procrastinação e sair da zona de conforto.
+
+(8:04 - 8:07)
+Parar com a autossabotagem. A paz diz. Viva no seu máximo potencial.
+
+(8:08 - 8:24)
+São dois assuntos diferentes. O que acontece? A pessoa vem atraída por um anúncio que fala de... De acabar com a procrastinação, de parar de se autossabotar para você ter os resultados, para você ter a vida que merece. E ela chega na página e só viva o seu máximo potencial.
+
+(8:24 - 8:36)
+Então, às vezes, a pessoa nem sabe qual que é o máximo dela, o potencial que ela tem, porque ela tem crença limitante, tem muita coisa que está bloqueando ela. Você tem a primária fraca, o botão verde. Quero viver essa experiência.
+
+(8:36 - 8:41)
+É discreto, sem sombra, sem pulso. O olho da audiência passa direto. Quem não vê, não clica.
+
+(8:41 - 8:50)
+E você paga igual. É a mesma coisa aqui, está vendo? A gente colocou um botão aqui. Não sei se dá para perceber na gravação, mas ele está... Meio que vive, ele fica pulsando.
+
+(8:50 - 9:01)
+Tanto nessa sessão, quanto nas demais sessões que aparecem esse botão. Vou voltar aqui. Zero rastreamento de origem.
+
+(9:01 - 9:06)
+Nossa maior dor é essa. Identificar de onde está vindo o clique. Foi o que o Bruno falou na reunião.
+
+(9:06 - 9:17)
+Sem o tema inconsistente, você não sabe qual criativo gera venda, só qual gera o cadastro. Sem precificação na página. A página não mostra preço, nem lote, nem garantia.
+
+(9:17 - 9:26)
+Quem chega curioso, sai sem informação para decidir. Tem que esperar uma consultora ligar. Em ciclo de 30 dias, o lead esfria antes da ligação.
+
+(9:26 - 9:41)
+E aqui, com a Dulce, o que a gente está fazendo aqui? Essa página não tem preço. Não tem valor, na verdade. Uma delas que nós fizemos, eu coloquei um valor até para eles fazerem um teste aqui.
+
+(9:42 - 9:58)
+Essa página aqui. E eu já deixo claro em cima aqui que a gente fala de valor, emissão que o Salvador já agendou no seu calendário. Eu clico aqui.
+
+(9:58 - 10:12)
+Eu vou fazer um pré-checkout que eu vou mostrar para vocês daqui a pouco. Mas aqui na página, eu tenho falando o que é. Três dias que reprogramam a sua relação com dinheiro, valor e tal. E garantia.
+
+(10:13 - 10:27)
+Se a pessoa quiser comprar direto, ela vai clicar aqui, vai preencher os dados e ela vai ser redirecionada já para a página de venda. É o que funciona bastante. A gente utiliza em todos os produtos, inclusive até o método SIS online que nós rodamos.
+
+(10:27 - 10:39)
+Ele já tem na página o valor e tal. Gabriel, acho que chegou a gente. Já vem no portão aí.
+
+(10:40 - 10:54)
+Aqui os valores, as formas de pagamento, o cartão, o boleto. Voltando aqui. A página não mostra preço, nem note, nem garantia.
+
+(10:54 - 11:05)
+Quem chega curioso, sabe que eu já falei. Sem prova social do Rio de Janeiro. A página atual mostra foto de Salvador, 7 mil pessoas que moram no Rio de Janeiro e querem ver o Rio.
+
+(11:05 - 11:17)
+Quem vai para o Rio Centro quer ver o Rio Centro. Prova genérica, não converte audiência local. Porque o pessoal da região já conhece, já sabe qual é o local do evento.
+
+(11:17 - 11:32)
+Então a gente não tem isso aqui. Tem Curitiba, Rio de Janeiro. O que eu fiz aqui? Até para dar uma aproximada para o pessoal da Bahia.
+
+(11:32 - 11:41)
+Eu coloquei uma imagem aqui. A gente montou aqui parte de uma das praias mais famosas lá de Salvador. Aqui do lado direito, o farol.
+
+(11:42 - 11:53)
+Também para dar uma questão de identidade. Para o pessoal se identificar, mesmo quem não é da cidade, bate o olho e fala isso aqui é em Salvador mesmo. Continuando.
+
+(11:54 - 12:00)
+Não tem os depoimentos locais. Bom, pelo menos não encontramos. Sem urgência visível.
+
+(12:00 - 12:11)
+Nada diz que existe um lote. Agora que termina em data tal, que tem vaga ilimitada, que finaliza em tantos dias. Isso é um algo de escassez que é muito bom de utilizar.
+
+(12:11 - 12:20)
+Aqui nós tiramos da página. Deixa eu ver se colocamos na da... Aqui da Dulce. A gente colocou aqui vagas.
+
+(12:21 - 12:29)
+O espaço é limitado. Se é que Bahia comporta uma turma por edição, quem não entra nessa turma espera a próxima. Os valores tendem a subir.
+
+(12:29 - 12:36)
+Então estou gerando a escassez aqui. Falando de limite de pessoas. E que vai subir o valor, né? Para quem não entrar nessa... Nessa próxima etapa.
+
+(12:37 - 12:46)
+Persona indefinida. Para que é o método CIS? É um texto de oito linhas tentando atender seis perfis. Quem tenta falar com todo mundo não fala com ninguém.
+
+(12:46 - 12:57)
+Os dados mostram mulher executiva do Rio de Janeiro, 35, 45, 44 anos. Então o que seria o ideal? Sugestão. A gente poderia ter mais páginas.
+
+(12:57 - 13:08)
+Cada página falando com público específico. E aqui, lado a lado, né? A gente comparando as páginas. Apenas as diferenças estruturais que alteram a taxa de conversão.
+
+(13:09 - 13:20)
+A cosmética foi removida aqui desse comparativo. Cosmética em que sentido? Questão visual, questão estética mesmo. É só a parte funcional que a gente está analisando aqui.
+
+(13:21 - 13:24)
+Página atual. Vende o conceito do CIS. Proposta nova.
+
+(13:24 - 13:29)
+Vender o ingresso do evento para as pessoas participarem. Headline genérica. Viva o seu máximo potencial.
+
+(13:29 - 13:32)
+Headline ecoa. Anúncio campeão. Três variantes AB.
+
+(13:33 - 13:46)
+Ou seja, eu vou abrir para vocês daqui a pouco. Vocês vão ver que cada headline, cada copy da página, ela foi desenvolvida do começo ao fim, complementando o que os anúncios campeões traziam. Fala do método, não do evento.
+
+(13:47 - 13:52)
+Especifica o evento. 5 a 7 de agosto, no Rio Centro. Foto do CIS Salvador e outra cidade.
+
+(13:53 - 14:04)
+Foto ou vídeo no próprio Rio Centro, né? Próxima edição no meio da página escondida. E aqui a gente traz data e local onde está, aqui na primeira sessão. CTA verde e discreto.
+
+(14:04 - 14:12)
+Fácil de ignorar. CTA verde, sólido, sombra e pulso. E principalmente lá no topo da página, né? Sem preço, sem loto.
+
+(14:12 - 14:26)
+Formulário de lead, sem checkout integrado, pré-checkout integrado. Que vai ser o quê? A pessoa, para saber o preço, ela tem que deixar os dados dela para a gente em um formulário. Nós vamos armazenar esses dados para vocês.
+
+(14:27 - 14:47)
+E aí ele vai seguir para o CISPEI para fazer o pagamento. Se vocês identificarem que esse lead, que essa pessoa não comprou, aí o time, o time de vocês de venda, ou até uma automação pode entrar em contato para prosseguir com a venda, né? Sem preço, sem loto, sem urgências. Lotos visíveis com escala de preços.
+
+(14:48 - 14:54)
+Para quem é oito linhas textos de genérico. Persona definida. Checklist de alta identificação.
+
+(14:56 - 15:01)
+FAQ. Não é sobre o evento. FAQ sobre logística, estacionamento, dress code, parcelamento.
+
+(15:02 - 15:07)
+Sem agenda dos três dias. Agenda dos três dias. O que acontece em cada um desse, que é muito importante.
+
+(15:07 - 15:22)
+Eu sei que é corrido demais. Podem mudar as agendas, mas era interessante a gente trazer, talvez, uma sugestão de conteúdo. Do que eles vão receber e tal.
+
+(15:22 - 15:29)
+Como que vai funcionar. O evento. Esse aqui já é o do... Deixa eu abrir aqui a página do evento.
+
+(15:30 - 15:42)
+Último recomeço. É o que antecede isso aqui. Deixa eu clicar aqui.
+
+(15:46 - 16:02)
+Inscrição. Bom, aqui a gente já traz uma prévia de cronograma de como que seria o evento, né? O que vai acontecer e tal. Só sugestão.
+
+(16:02 - 16:15)
+Sei que é muito difícil, que tem muita coisa, mas isso aqui ajuda bastante na parte de... Na parte de... Quebra de objeção, né? Do lead. Continuando aqui. Sem agenda dos três dias.
+
+(16:15 - 16:23)
+Sem garantia visível. Tem uma das páginas que eu vi que fala garantia no topo. Ah, não.
+
+(16:23 - 16:29)
+O que fala de garantia é a outra página de vocês. Acho que é de um treinamento que tem aí de... Não lembro agora. Mas eu vi que tem.
+
+(16:30 - 16:37)
+Bem discretinha em cima. Deixa eu ver aqui. Acho que escola de negócios.
+
+(16:40 - 16:47)
+Aqui, ó. Métodos de Rio de Janeiro presencial. É isso aqui. Tem aqui em cima.
+
+(16:50 - 16:58)
+É, muda a barra ali. Rio de Janeiro, 5 a 7 de agosto. Tem alguns depoimentos aqui também.
+
+(16:58 - 17:06)
+Tá, isso aqui então é porque... Olha, tá muito discreto que a gente não conseguiu ver. Nem a... O nosso time viu. Mas vamos seguir.
+
+(17:08 - 17:14)
+Mesmo template das outras unidades. Isso aqui é muito sério, pessoal. Porque todas as... As unidades usam a mesma estrutura.
+
+(17:14 - 17:22)
+O mesmo template. E o que que acontece? Talvez a pessoa viu. Caiu um anúncio da sua página.
+
+(17:23 - 17:32)
+Se ela já tiver entrado em outra... Em uma outra unidade da Febracis. Algum outro evento. E ela... Cara, já vi isso aqui.
+
+(17:32 - 17:41)
+Sabe? Você acaba que perde esse lead que você pagou para levar até a página. 14 pontos onde a estrutura muda. Aspecto, né? A Hero Headline.
+
+(17:42 - 17:51)
+Essa seção aqui. Deixa eu ver aqui. Método CIS, presencial.
+
+(17:56 - 18:14)
+Método CIS. Tá confuso isso aqui, tá? Deixa eu ver aqui. O link que vocês mandaram no grupo.
+
+(18:20 - 18:26)
+CIS presencial, beleza. Esse aqui mesmo, tá. Bom, acho que já tem alguns pontos aqui que a gente analisou.
+
+(18:26 - 18:31)
+Acho que eu ia analisar na outra página. Quando eu fui acessar esse aqui. Ela estava fora.
+
+(18:31 - 18:35)
+Ela estava off. E aí analisamos com a outra. Mas isso aqui já está certo.
+
+(18:35 - 18:38)
+5 a 7 de agosto. Rio Centro. Maior evento do mundo.
+
+(18:39 - 18:45)
+Botando só o botão aqui. Dá alguns... Talvez muda essa imagem aqui. Vamos seguir.
+
+(18:46 - 18:49)
+Página atual. Vive o seu máximo potencial. Mensagem motivacional.
+
+(18:50 - 18:54)
+Genérico. Não bate com nenhum anúncio. Aqui, três variantes que nós já trouxemos.
+
+(18:54 - 18:57)
+Reconhecimento da dor. Inexistente. Paulo Direto.
+
+(18:58 - 19:01)
+Para o que é inteligência emocional. Três cards de dor. Usando palavras.
+
+(19:01 - 19:05)
+Bom, vou estar mandando o link para vocês. Disso aqui. Prova social.
+
+(19:07 - 19:13)
+Caso a decisão está ancorada em dado. Ou fala literal do anúncio campeão. Headline do anúncio campeão.
+
+(19:13 - 19:21)
+O anúncio campeão absoluto. Foi esse aqui. Que foi R$ 8.825,00. 1.149 leads.
+
+(19:21 - 19:31)
+A um custo de R$ 7,68. Seria interessante a gente ter os dados de quantas vendas foram geradas através desse anúncio aqui. O vídeo do Paulo no Rio Centro.
+
+(19:32 - 19:40)
+A transcrição completa revela o vocabulário que mais converte. Então, no anúncio, o Paulo fala de procrastinação. Vai acabar causando desconforto.
+
+(19:41 - 19:47)
+Reprogramar as crenças e identidades. Vem pagar o preço por um nível melhor. Usar nova página.
+
+(19:48 - 19:55)
+Usa essas mesmas palavras âncora. Os cards de dor e de promessa. Quem clicou no anúncio encontra o mesmo discurso na página.
+
+(19:55 - 20:04)
+Sem quebra de mensagem. O anúncio 3, a mesma situação. Perdão, o anúncio 2 e o anúncio 3. Pessoa definida pela demografia real.
+
+(20:05 - 20:09)
+Mais informações aqui. Lotes visíveis. CTA primário destacado.
+
+(20:10 - 20:27)
+E tem a parte do pré-checkout. Pessoal, por que usar o pré-checkout? Eu já tinha falado inicialmente que quando a gente passa pelo pré-checkout, a pessoa comprando ou não, a gente vai ter as informações dela na página. Deixa eu abrir aqui o nosso sistema.
+
+(20:30 - 20:36)
+Aqui. Deixa eu pegar aqui na Cardelites. Aqui o nosso lançamento atual da Camila.
+
+(20:38 - 20:46)
+Quando a pessoa se cadastra, eu tenho aqui o telefone dela. Eu tenho a região dela. Tem todas as UTMs.
+
+(20:47 - 20:58)
+Tem tudo o que é necessário para rastrear, para entender que anúncio que essa pessoa veio. Clicando aqui eu sei. Ela veio da campanha tal.
+
+(20:59 - 21:04)
+Captação. Cadastro. Captação quente.
+
+(21:04 - 21:10)
+Anúncio. Marido que merece 3. Isso aqui está voando. Esse anúncio aqui.
+
+(21:11 - 21:18)
+Para vocês verem. Marido que merece V2. Marido que merece V3.
+
+(21:18 - 21:27)
+Ela trouxe 23 mil leads. E o marido que merece V2 trouxe 36.991 leads. A gente está com muito lead através desses aqui.
+
+(21:28 - 21:41)
+E estamos rodando muitas páginas. A gente está com 1, 2, 3, 4, 5, 6, 7, 8, 9. 9 páginas diferentes rodando o lançamento. Essas aqui foram páginas que a gente começou a rodar essa semana.
+
+(21:41 - 21:52)
+Mas como que a gente sabe que precisa de ter novas páginas rodando? Porque a gente tem as métricas. A gente entende de onde que o lead veio. De qual anúncio que ele estava vindo.
+
+(21:52 - 22:00)
+Qual anúncio que está gerando mais clique. Isso nos possibilita ter mais inteligência do negócio. E consequentemente testar mais páginas.
+
+(22:01 - 22:05)
+Testar mais anúncios. E é isso. Eu vou abrir para vocês a página.
+
+(22:05 - 22:13)
+Daqui a pouco vocês vão ver essa questão do pré-checkout. E aqui. Benchmark do mercado para captura simples versus captura com pré-checkout e ofertas de high ticket.
+
+(22:14 - 22:24)
+Conversão de lead para a venda. Quando a gente usa o pré-checkout mais de 15%. Leads recuperados em mais de 30% de leads recuperados em 48 horas.
+
+(22:25 - 22:33)
+100% de UTMs reservadas. Pré-reservadas. Que quer dizer o que? Vocês vão ter 100% de inteligência para saber de onde que está vindo o seu lead.
+
+(22:33 - 22:38)
+Se está compensando utilizar esse anúncio. Se não está. Voltando aqui no nosso caso.
+
+(22:39 - 22:42)
+Olha. Tem anúncios aqui. Isso aqui.
+
+(22:42 - 22:46)
+Mulheres feridas. Esse aqui. Anúncio não está convertendo mais.
+
+(22:46 - 22:51)
+No lançamento anterior converteu bastante. Então no próximo. Talvez não compensa nem utilizar.
+
+(22:51 - 23:00)
+Compensa mais a gente utilizar esses outros aqui que estão disparadamente maiores. Que a gente tem dados das campanhas também. Que a gente consegue trackear.
+
+(23:01 - 23:07)
+Dados das páginas. Vocês vão conseguir trackear também as páginas de vocês. Para entender qual página está convertendo mais.
+
+(23:09 - 23:18)
+O pré-checkout também auto-qualificação de lead. Porque quem chega até o modal de checkout é porque realmente está interessado. Velocidade de teste de oferta.
+
+(23:18 - 23:24)
+Que eu expliquei aqui. Lead não fica perdido no final de semana. Que ele pode fazer o pré-checkout.
+
+(23:24 - 23:30)
+Pode clicar sozinho para comprar. No Facebook recebe o evento de compra. Então aumenta ainda mais inteligência.
+
+(23:31 - 23:41)
+O que a página do CIS online já faz certo. E o presencial no Rio ainda não usa. Aqui eu trouxe como base também uma página que a gente fez.
+
+(23:41 - 23:47)
+Essa página aqui. Que vai. Está testada.
+
+(23:47 - 23:51)
+Está vendendo. Então isso aqui vocês não tinham. A gente incluiu na página.
+
+(23:53 - 23:55)
+Página de sugestão. Claro. Cards.
+
+(23:56 - 24:00)
+Em modo pergunta direta. Por exemplo. Sente que sempre tem algo travando em você.
+
+(24:01 - 24:07)
+Seis cards visuais com tema e descrição. Cards azul e laranja com inspiração e sugestão. Número gigante.
+
+(24:07 - 24:11)
+A explicação curta. Por exemplo. R$197 gigante.
+
+(24:11 - 24:18)
+Mais cinco vezes sem juros. Aqui a própria holding. No caso não fomos nós que fizemos essa página.
+
+(24:18 - 24:23)
+Mas a gente está no ecossistema também. Então a própria holding já sabe como fazer. Página que converte.
+
+(24:23 - 24:32)
+Só não aplicou no Presencial Rio ainda. A proposta nova traz coerência com o padrão do SIS Online adaptado para o evento presencial com lotes, agenda, mapa e o centro. Então aqui.
+
+(24:32 - 24:46)
+Eu peguei as cores dessa estrutura do SIS Online que foi a página que a gente desenvolveu. Mas ela pega também as cores da Febracis que é o azul e o amarelo. Se vocês tiverem uma comunicação visual identidade visual padrão da Febracis de vocês a gente pode aplicar.
+
+(24:47 - 24:58)
+Projeção impacto comercial. O que muda no seu número de vendas na prática? Sugestões. Premissas conservadoras baseadas nos dados de novembro de 2025 e benchmarks de mercado.
+
+(24:58 - 25:10)
+Mesmo investimento em tráfego mesmo volume de cadastro muda só a página e o fluxo. Cenário 1. Conservador. A gente teria um aumento de 55% das vendas comparado com a forma que se rodaram o tráfego.
+
+(25:11 - 25:17)
+Cenário realista. A gente sairia de 9 vendas só para 22. Mas eu acredito que é muito maior esse cenário aqui.
+
+(25:18 - 25:24)
+Cenário otimista. 31 vendas. Falando e analisando com base nos dados que eu tenho.
+
+(25:24 - 25:40)
+Só que vocês nos passaram e essa é a média que a gente consegue ter de aumento de vendas. Então se vocês tivessem feito 100 vendas a gente estaria falando de mais de 300 vendas aqui. Seguindo essa mesma estrutura.
+
+(25:40 - 25:53)
+Aqui os números em receita. E como nós chegamos a esses números que vocês vão ter acesso. Vamos para a prática aqui agora para analisar as páginas.
+
+(25:53 - 26:03)
+Então eu tenho aqui. A página 1. A pessoa que mais sabota está dentro de você. Em 5, 6 e 7 de agosto no Rio Centro.
+
+(26:03 - 26:27)
+Três dias com Paulo Vieira para destravar a mente que tem freado toda vez que algo grande estava prestes a acontecer. Aqui eu peguei uma imagem de background na mesma página. Só como sugestão aqui a estrutura, a cópia para vocês porque fica mais fácil vocês analisarem estrutura assim blocado na página do que eu mandar só uma cópia de texto corrido.
+
+(26:28 - 26:40)
+Então vamos lá. Aqui estou gerando aqui algo de escassez porque a última edição esgotou em poucas semanas e também mostrar aqui o local. Talvez já tem vagas limitadas.
+
+(26:40 - 26:58)
+O botão vivo que eu falo aqui ele pulsando ele não está aqui na tela. Mais de 2 milhões de pessoas treinadas mais de 100 países com os alunos mais de 25 anos de método comprovado. Você se reconhece toda vez que algo grande está perto alguma coisa trava.
+
+(26:58 - 27:17)
+Você já percebeu que o problema não é falta de oportunidade dinheiro conhecimento é outra coisa e você sabe disso. Você se sabota perto da virada você ganha bem mas se sente travado você sabe o que fazer e não faz. Se a gente tivesse alguma pesquisa de vocês com audiência talvez vocês tenham pudermos passar esse material.
+
+(27:18 - 27:29)
+A gente consegue deixar muito mais rico ainda. A entrega dos três dias três dias presenciais que destravam o que dez anos de tentativas não destravam. Mais informações sobre vocês.
+
+(27:30 - 27:43)
+Aqui o ideal seria um vídeo talvez um teaser do último evento. O que aconteceu com vocês. 5 mil pessoas três dias uma cidade virada do avesso o rio parou e quem estava lá parou de adiar.
+
+(27:43 - 27:58)
+Isso aqui é uma frase muito motivacional impactante também. Aqui a gente traria três depoimentos específicos de pessoas que participaram de lá se a gente conseguir. Então a gente pode manter aqueles depoimentos globais.
+
+(27:59 - 28:14)
+Marque os sinais que você reconhece a si mesmo se você marcar três esse evento é feito para você. Aqui até uma forma de de eu mexer com a pessoa. É claro que não é muito funcional aqui é só ela.
+
+(28:14 - 28:25)
+Ela clicou não vai para nenhum lugar mas é para mexer com ela. É algo interativo dela. Você marcou oito sinais e se você marcou se você marcou três ou mais sua vaga está aqui.
+
+(28:26 - 32:17)
+Marquei sete marquei seis que era a minha vaga. Uma jornada estruturada nada solto nada motivacional. Aqui seria como fosse um resumo do que a pessoa vai ter digamos uma informação de uma vitória rápida que ela teria aqueles três dias de evento conduzido por Paulo Vieira Paulo Vieira não sobe sozinho Camila e Júlia o que torna Rio Centro substituível presencial três dias imersivos Rio Centro kit físico as pessoas impactadas vejam em 60 segundos que é difícil difícil ficar em parágrafo que seriam mais depoimentos das pessoas escolha sua experiência no Rio Centro lote pioneiro primeiro lote valor lote VIP esse valor sete dias para decidir sem perguntar dúvidas frequentes sobre o evento aqui a gente está falando sobre o evento que é o importante não está falando sobre o método CIS sua vaga te esperando aqui os dados para preencher quero reservar minha vaga agora como funcionaria o pré-checkout aqui a minha vaga no Rio Centro vou pegar aqui embaixo também talvez eu escolha isso aqui quero VIP meus dados ir para o check-out capturada para ativar o redirect não tem redirect aqui mas se vocês me passarem o link do check-out esses dados vão cair em uma planilha ou no CRM se vocês quiserem e o lead vai ser redirecionado lá para o check-out mas vocês têm essa informação aqui seria da página 1 página 2 sua mente virou seu maior inimigo aqui a página inteira falando sobre a mente a voz que te critica é a sua você conhece todo argumento contra você melhor do que qualquer concorrente e é ela não o mercado quem decide o tempo diálogo interno te derrubo antes de começar antes da reunião antes da proposta antes da conversa difícil sua mente já te disse cinco motivos para decidir você escuta e obedece vocês viram que é diferente aqui da versão anterior porque aqui a página foi pensada e criada com base nos anúncios campeões a gente vem rolando até embaixo Paulo Camilo também mesma situação de pré-check-out página 3 compra ingresso teve outra pessoa provavelmente deve ter tido algum anúncio que falando isso aí se tiver talvez usaria essa página como remarketing pessoa chegou na página não comprou mandaria essa página para elas dois ingressos pelo preço de um o cônjuge que vive a mesma que vive a mesma trava tá errado aqui vou ter que corrigir mas é que é sugestão você muda ele não acompanha e não acompanha o Rio Centro é o lugar onde os dois evoluem na mesma velocidade no mesmo idioma sem ter que traduzir o resto da vida então sim eu vou mandar para vocês então esse vídeo aqui vou mandar as páginas vocês analisem para entender a ideia ver se se vale a pena se vocês querem fazer mais algum teste e a gente a gente segue como eu falei eu vou estar fora essa semana acho que é o tempo que vocês precisam para analisar isso aí vocês validando não precisa de estar aqui eu já direciono para o time já começar a seguir com esse desenvolvimento tá então é isso aí já estou finalizando a gravação envio para vocês o link daqui a pouco da gravação junto com o link das páginas valeu

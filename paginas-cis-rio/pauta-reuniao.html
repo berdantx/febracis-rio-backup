@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pauta de reunião · Febracis Rio</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy-0: #030714;
+  --navy: #0A1430;
+  --navy-2: #07102A;
+  --navy-3: #141C3D;
+  --yellow: #FFB901;
+  --yellow-d: #D69900;
+  --white: #ffffff;
+  --g300: #cbd5e1;
+  --g400: #A1A1A1;
+  --g500: #737373;
+  --border: rgba(255,185,1,0.18);
+  --border-soft: rgba(255,255,255,0.08);
+  --green: #4ade80;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 70% 0%, rgba(255,185,1,0.06), transparent 55%),
+    radial-gradient(ellipse at 20% 100%, rgba(43,62,148,0.18), transparent 50%);
+  background-attachment: fixed;
+}
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+/* MASTHEAD */
+.masthead {
+  padding: 32px 0 20px;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center; gap: 24px;
+}
+.masthead-brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px; font-weight: 900;
+  letter-spacing: -0.04em; font-style: italic;
+  color: var(--yellow);
+}
+.masthead-issue, .masthead-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 500;
+  color: var(--g400);
+}
+.masthead-issue { text-align: center; }
+
+/* HEADER */
+header.hero {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--border);
+}
+.eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--yellow);
+  font-weight: 700; margin-bottom: 14px; display: inline-block;
+}
+.eyebrow.dot::before {
+  content: ''; display: inline-block;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--yellow); margin-right: 8px;
+  vertical-align: middle; transform: translateY(-1px);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+h1.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(26px, 3.2vw, 44px);
+  font-weight: 600; line-height: 1.1;
+  letter-spacing: -0.025em;
+  max-width: 22ch;
+  margin-bottom: 16px;
+}
+h1.title em { font-style: italic; color: var(--yellow); font-weight: 500; }
+.hero-meta {
+  display: flex; flex-wrap: wrap;
+  gap: 24px; margin-top: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px; letter-spacing: 0.05em;
+  color: var(--g300);
+}
+.hero-meta strong { color: var(--yellow); font-weight: 700; }
+
+/* TIMELINE STRIP */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 32px 0 56px;
+}
+.tl-step {
+  background: var(--navy-2);
+  padding: 16px 14px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background .25s;
+}
+.tl-step:hover { background: var(--navy-3); }
+.tl-step .n {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.2em;
+  color: var(--yellow); font-weight: 700;
+  margin-bottom: 6px;
+}
+.tl-step .name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+.tl-step .time {
+  font-size: 11px; color: var(--g500); margin-top: 4px;
+}
+
+/* SECTION TAG */
+.section-tag {
+  padding: 8px 0 16px;
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 20px; align-items: baseline;
+  margin-top: 40px;
+}
+.section-tag .num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px; font-weight: 300;
+  font-style: italic; line-height: 0.85;
+  letter-spacing: -0.04em; color: var(--yellow);
+}
+.section-tag .meta {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--g400);
+  font-weight: 600; padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between;
+}
+.section-tag .meta .time {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; color: var(--yellow);
+  letter-spacing: 0.15em; font-weight: 700;
+}
+h2.s-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 600; line-height: 1.25;
+  letter-spacing: -0.025em;
+  margin: 8px 0 22px;
+  color: var(--white);
+}
+h2.s-title em { font-style: italic; color: var(--yellow); }
+.who {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 700;
+  padding: 5px 10px;
+  background: rgba(255,185,1,0.10);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--yellow);
+  margin-bottom: 14px;
+}
+
+/* CHECKLIST */
+.checklist {
+  background: var(--navy-2);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.check-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--border-soft);
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  transition: background .15s;
+}
+.check-item:last-child { border-bottom: none; }
+.check-item:hover { background: var(--navy-3); }
+.check-item input[type="checkbox"] {
+  appearance: none;
+  width: 18px; height: 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.check-item input[type="checkbox"]:checked {
+  background: var(--yellow);
+  border-color: var(--yellow);
+}
+.check-item input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--navy);
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 1;
+}
+.check-item input[type="checkbox"]:checked + .ci-text {
+  color: var(--g500);
+  text-decoration: line-through;
+  text-decoration-color: var(--yellow-d);
+}
+.ci-text {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--white);
+  transition: color .2s, text-decoration .2s;
+}
+.ci-text strong { color: var(--yellow); font-weight: 600; }
+.ci-tag {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.ci-tag.decisao { background: rgba(255,185,1,0.12); color: var(--yellow); border: 1px solid var(--border); }
+.ci-tag.deles { background: rgba(74,222,128,0.12); color: var(--green); border: 1px solid rgba(74,222,128,0.3); }
+.ci-tag.nosso { background: rgba(255,255,255,0.06); color: var(--g300); border: 1px solid var(--border-soft); }
+
+/* OPEN QUESTIONS */
+.question {
+  background: var(--navy-2);
+  border-left: 3px solid var(--yellow);
+  padding: 18px 22px;
+  margin-bottom: 14px;
+}
+.question .q-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--yellow);
+  font-weight: 700; margin-bottom: 8px;
+}
+.question .q-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.question textarea {
+  width: 100%;
+  background: var(--navy-0);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 10px 12px;
+  resize: vertical;
+  min-height: 52px;
+  line-height: 1.5;
+}
+.question textarea:focus {
+  outline: none;
+  border-color: var(--yellow);
+}
+
+/* SCOPE BOXES */
+.scope-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.scope-col { background: var(--navy-2); padding: 24px 22px; }
+.scope-col h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 700;
+  margin-bottom: 16px;
+}
+.scope-col.in h4 { color: var(--green); }
+.scope-col.out h4 { color: #f87171; }
+.scope-col ul { list-style: none; }
+.scope-col ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--g300);
+  padding-left: 22px;
+  position: relative;
+}
+.scope-col ul li:last-child { border: none; }
+.scope-col.in li::before {
+  content: '✓';
+  position: absolute; left: 0; top: 10px;
+  color: var(--green); font-weight: 900;
+}
+.scope-col.out li::before {
+  content: '×';
+  position: absolute; left: 0; top: 9px;
+  color: #f87171; font-weight: 900; font-size: 18px;
+}
+
+/* DECISIONS BOX */
+.decisions {
+  margin-top: 32px;
+  background: rgba(255,185,1,0.08);
+  border: 1px solid var(--yellow);
+  border-radius: 4px;
+  padding: 28px;
+}
+.decisions h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px; font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--yellow);
+  margin-bottom: 16px;
+}
+.decisions .d-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.decisions .d-row:last-child { border: none; }
+.decisions .d-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px; font-weight: 900;
+  color: var(--yellow);
+  font-style: italic;
+  line-height: 1;
+}
+.decisions .d-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.decisions textarea {
+  width: 100%;
+  background: var(--navy-0);
+  border: 1px solid var(--border-soft);
+  border-radius: 3px;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  padding: 8px 10px;
+  resize: vertical;
+  min-height: 44px;
+  line-height: 1.5;
+}
+.decisions textarea:focus { outline: none; border-color: var(--yellow); }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 48px 0 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--g500);
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+}
+footer .brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px; font-weight: 900;
+  font-style: italic; letter-spacing: -0.02em;
+  color: var(--yellow); text-transform: none;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .timeline { grid-template-columns: repeat(2, 1fr); }
+  .scope-grid { grid-template-columns: 1fr; }
+  .masthead { grid-template-columns: 1fr; text-align: center; gap: 6px; }
+}
+@media (max-width: 560px) {
+  .wrap { padding: 0 18px; }
+  .check-item { grid-template-columns: auto 1fr; }
+  .ci-tag { grid-column: 2; justify-self: start; margin-top: 6px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="masthead-brand">Análise CIS Presencial RJ</div>
+    <div class="masthead-issue">Pauta de reunião · 30 min</div>
+    <div class="masthead-date">Maio 2026 · Time Febracis Rio</div>
+  </div>
+
+  <header class="hero">
+    <span class="eyebrow dot">Documento de acompanhamento · uso na call</span>
+    <h1 class="title">O que precisa <em>sair decidido</em> hoje.</h1>
+    <div class="hero-meta">
+      <div>Participantes: <strong>Larissa · Bruno · Emerson · Paulo</strong></div>
+      <div>Duração alvo: <strong>30 min</strong></div>
+      <div>Objetivo: <strong>3 decisões + checklist do que falta</strong></div>
+    </div>
+  </header>
+
+  <!-- TIMELINE -->
+  <nav class="timeline">
+    <a class="tl-step" href="#s1"><div class="n">01</div><div class="name">Validar conceito</div><div class="time">8 min</div></a>
+    <a class="tl-step" href="#s2"><div class="n">02</div><div class="name">Números reais</div><div class="time">7 min</div></a>
+    <a class="tl-step" href="#s3"><div class="n">03</div><div class="name">Tracking</div><div class="time">7 min</div></a>
+    <a class="tl-step" href="#s4"><div class="n">04</div><div class="name">Cronograma</div><div class="time">3 min</div></a>
+    <a class="tl-step" href="#s5"><div class="n">05</div><div class="name">Escopo</div><div class="time">2 min</div></a>
+  </nav>
+
+  <!-- BLOCO 01 — VALIDAÇÃO -->
+  <section id="s1">
+    <div class="section-tag">
+      <div class="num">01</div>
+      <div class="meta"><span>Validação de conceito</span><span class="time">8 min</span></div>
+    </div>
+    <h2 class="s-title">As 3 hipóteses de copy <em>estão aprovadas</em>?</h2>
+    <div class="who">Decisão: Larissa + Paulo</div>
+
+    <div class="question">
+      <div class="q-label">Pergunta principal</div>
+      <div class="q-text">Subimos as 3 LPs (V1 Sabotagem · V2 Mente Inimiga · V3 1+1) ou começamos só com 1 pra validar?</div>
+      <textarea placeholder="Resposta / decisão aqui"></textarea>
+    </div>
+
+    <div class="checklist">
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>V1 Sabotagem</strong> — aprovada como está, ou tem ajuste de headline/copy?</span><span class="ci-tag decisao">Decisão</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>V2 Mente Inimiga</strong> — aprovada como está, ou tem ajuste de headline/copy?</span><span class="ci-tag decisao">Decisão</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>V3 1+1</strong> — aprovada como está, ou tem ajuste de headline/copy?</span><span class="ci-tag decisao">Decisão</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text">Algum criativo do Meta hoje que <strong>não cai bem</strong> em nenhuma das 3? Vale criar uma V4?</span><span class="ci-tag decisao">Decisão</span></label>
+    </div>
+  </section>
+
+  <!-- BLOCO 02 — NÚMEROS REAIS -->
+  <section id="s2">
+    <div class="section-tag">
+      <div class="num">02</div>
+      <div class="meta"><span>Números reais que faltam</span><span class="time">7 min</span></div>
+    </div>
+    <h2 class="s-title">Sem esses dados, <em>não sobe</em>.</h2>
+    <div class="who">Resposta: Larissa</div>
+
+    <div class="checklist">
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Lote Pioneiro Standard</strong> — valor real e parcelamento</span><span class="ci-tag deles">Larissa traz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Lote Pioneiro VIP</strong> — valor real e o que muda no acesso</span><span class="ci-tag deles">Larissa traz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Pack 1+1</strong> — preço e regra (mesmo lote? só pioneiro?)</span><span class="ci-tag deles">Larissa traz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Link do checkout</strong> — Eduzz / Kiwify / Hotmart / sistema interno?</span><span class="ci-tag deles">Bruno traz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Texto da garantia</strong> oficial CIS (7 dias? incondicional?)</span><span class="ci-tag deles">Larissa traz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Foto/vídeo do Rio Centro</strong> — material próprio ou usar genérico do Riocentro.com.br?</span><span class="ci-tag deles">Time traz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>3 depoimentos do RJ</strong> — vocês têm vídeo de aluno carioca da última edição?</span><span class="ci-tag deles">Larissa verifica</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Pesquisa de audiência</strong> — se existir, mandar pra enriquecer copy</span><span class="ci-tag deles">Verifica</span></label>
+    </div>
+  </section>
+
+  <!-- BLOCO 03 — TRACKING -->
+  <section id="s3">
+    <div class="section-tag">
+      <div class="num">03</div>
+      <div class="meta"><span>Tracking e integração</span><span class="time">7 min</span></div>
+    </div>
+    <h2 class="s-title">Sem UTM e webhook, a inteligência <em>fica parcial</em>.</h2>
+    <div class="who">Resposta: Bruno</div>
+
+    <div class="question">
+      <div class="q-label">Decisão técnica</div>
+      <div class="q-text">Onde os leads do pré-checkout vão cair? CRM, planilha Google, ManyChat, e-mail?</div>
+      <textarea placeholder="Resposta do Bruno"></textarea>
+    </div>
+
+    <div class="checklist">
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>UTMs por criativo</strong> — Bruno cadastra no Meta Ads ou a gente prepara a planilha?</span><span class="ci-tag decisao">Decisão</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Endpoint do webhook</strong> — URL que recebe os dados do pré-checkout</span><span class="ci-tag deles">Bruno traz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Pixel do Meta / CAPI</strong> — Bruno já tem instalado e firing no checkout?</span><span class="ci-tag deles">Bruno confirma</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Domínio definitivo</strong> — cisrio.com.br/destrave etc, ou continua Vercel até go-live?</span><span class="ci-tag decisao">Decisão</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Microsoft Clarity</strong> — instalar para gravação de sessão</span><span class="ci-tag nosso">A gente faz</span></label>
+      <label class="check-item"><input type="checkbox"><span class="ci-text"><strong>Short.io</strong> — usar pra encurtar URLs dos criativos com UTM</span><span class="ci-tag nosso">A gente orienta</span></label>
+    </div>
+  </section>
+
+  <!-- BLOCO 04 — CRONOGRAMA -->
+  <section id="s4">
+    <div class="section-tag">
+      <div class="num">04</div>
+      <div class="meta"><span>Cronograma até go-live</span><span class="time">3 min</span></div>
+    </div>
+    <h2 class="s-title">Quando <em>sobe</em>?</h2>
+
+    <div class="question">
+      <div class="q-label">Janela de validação</div>
+      <div class="q-text">Até quando o time analisa as páginas e devolve com aprovação ou ajustes?</div>
+      <textarea placeholder="Ex: até sexta 16/mai"></textarea>
+    </div>
+
+    <div class="question">
+      <div class="q-label">Data alvo de go-live</div>
+      <div class="q-text">Idealmente 60+ dias antes do evento (05/ago/2026). Que tal apontar 01/jun como meta?</div>
+      <textarea placeholder="Data combinada"></textarea>
+    </div>
+
+    <div class="question">
+      <div class="q-label">Próximo ponto de contato</div>
+      <div class="q-text">Call semanal de status? Acompanhamento assíncrono via grupo? Qual rito funciona?</div>
+      <textarea placeholder="Rito combinado"></textarea>
+    </div>
+  </section>
+
+  <!-- BLOCO 05 — ESCOPO -->
+  <section id="s5">
+    <div class="section-tag">
+      <div class="num">05</div>
+      <div class="meta"><span>Escopo formal · Reforço pro Paulo</span><span class="time">2 min</span></div>
+    </div>
+    <h2 class="s-title">O que está <em>dentro</em>, o que está <em>fora</em>.</h2>
+
+    <div class="scope-grid">
+      <div class="scope-col in">
+        <h4>Dentro do escopo (3 meses)</h4>
+        <ul>
+          <li>5 páginas entregues (defesa + index + 3 LPs)</li>
+          <li>Setup de pré-checkout com captura de lead</li>
+          <li>UTMs estruturadas por criativo</li>
+          <li>2 meses de acompanhamento pós-go-live</li>
+          <li>Replicável para Brasília e Orlando sem custo extra</li>
+          <li>Orientação sobre Clarity / Short.io / dedupe de base</li>
+        </ul>
+      </div>
+      <div class="scope-col out">
+        <h4>Fora do escopo</h4>
+        <ul>
+          <li>SDR IA (negociar separado com Emerson em call 1:1)</li>
+          <li>Produção de anúncios novos (vocês continuam rodando)</li>
+          <li>Instalação técnica do pixel/CAPI (Bruno faz)</li>
+          <li>Páginas adicionais além das 3 LPs A/B</li>
+          <li>Integração customizada com CRM interno (caso exista)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATA -->
+  <div class="decisions">
+    <h3>Ata final · 3 decisões que precisam sair desta call</h3>
+
+    <div class="d-row">
+      <div class="d-num">01</div>
+      <div>
+        <div class="d-label">Aprovação (ou ajustes) das 3 LPs</div>
+        <textarea placeholder="Ex: V1 e V2 aprovadas. V3 ajustar headline para X. Subir as 3."></textarea>
+      </div>
+    </div>
+
+    <div class="d-row">
+      <div class="d-num">02</div>
+      <div>
+        <div class="d-label">Quem entrega o quê até quando</div>
+        <textarea placeholder="Ex: Larissa traz valores até quarta. Bruno cadastra UTMs até sexta. A gente sobe segunda."></textarea>
+      </div>
+    </div>
+
+    <div class="d-row">
+      <div class="d-num">03</div>
+      <div>
+        <div class="d-label">Data de go-live alvo</div>
+        <textarea placeholder="Ex: subir em produção dia 01/jun, antes do meio do mês."></textarea>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="brand">Análise CIS Presencial RJ</div>
+  <div>Pauta de reunião · Uso interno · Maio 2026</div>
+</footer>
+
+<script>
+  // Persistência local (sobrevive a reload durante a call)
+  const STORAGE_KEY = 'pauta-febracis-rj';
+  const state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+
+  document.querySelectorAll('input[type="checkbox"]').forEach((cb, i) => {
+    const key = 'cb_' + i;
+    if (state[key]) cb.checked = true;
+    cb.addEventListener('change', () => {
+      state[key] = cb.checked;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    });
+  });
+
+  document.querySelectorAll('textarea').forEach((ta, i) => {
+    const key = 'ta_' + i;
+    if (state[key]) ta.value = state[key];
+    ta.addEventListener('input', () => {
+      state[key] = ta.value;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    });
+  });
+</script>
+
+</body>
+</html>
